@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "entregas/about.html",
+    "href": "entregas/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html",
+    "href": "entregas/E0_comprension_negocio/preguntas.html",
+    "title": "",
+    "section": "",
+    "text": ":"
+  },
+  {
+    "objectID": "entregas/index.html",
+    "href": "entregas/index.html",
+    "title": "Proyecto_Mineria_Datos",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]
