@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto_Mineria_Datos</title>
+<title>Anticipación de saturación y recomendación de rutas alternas – Proyecto Integrador — Minería de Datos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -44,13 +45,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f34e1d7bec0cc46f60e6c3c25b045a4b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e3144656cb5138d699b5d8ef7c5b64b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -59,37 +60,197 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Proyecto Integrador — Minería de Datos</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.qmd" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e0-—-comprensión-del-negocio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">E0 — Comprensión del Negocio</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-e0-—-comprensión-del-negocio">    
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/bitacora.html">
+ <span class="dropdown-text">1. Bitácora del stakeholder</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/canvas.html">
+ <span class="dropdown-text">2. Business Understanding Canvas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/preguntas.html">
+ <span class="dropdown-text">3. Preguntas de investigación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/criterio_exito.html">
+ <span class="dropdown-text">4. Criterio de éxito</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/riesgos_supuestos.html">
+ <span class="dropdown-text">5. Supuestos y riesgos</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/uso_ia.html">
+ <span class="dropdown-text">6. Uso de herramientas de IA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../entregas/E0_comprension_negocio/fuentes.html">
+ <span class="dropdown-text">7. Fuentes consultadas</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Anticipación de saturación y recomendación de rutas alternas</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inicio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">E0 — Comprensión del Negocio</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/bitacora.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Bitácora de la reunión con el stakeholder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/canvas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Business Understanding Canvas (CRISP-DM)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/preguntas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Preguntas de investigación priorizadas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/criterio_exito.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Criterio de éxito en términos de negocio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/riesgos_supuestos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Supuestos y riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/uso_ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Documentación del uso de herramientas de IA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../entregas/E0_comprension_negocio/fuentes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Fuentes consultadas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#el-proyecto" id="toc-el-proyecto" class="nav-link active" data-scroll-target="#el-proyecto">El proyecto</a></li>
+  <li><a href="#estado-de-las-entregas" id="toc-estado-de-las-entregas" class="nav-link" data-scroll-target="#estado-de-las-entregas">Estado de las entregas</a></li>
+  <li><a href="#entrega-e0-comprensión-del-negocio" id="toc-entrega-e0-comprensión-del-negocio" class="nav-link" data-scroll-target="#entrega-e0-comprensión-del-negocio">Entrega E0 — Comprensión del Negocio</a></li>
+  <li><a href="#equipo" id="toc-equipo" class="nav-link" data-scroll-target="#equipo">Equipo</a></li>
+  <li><a href="#datos-y-licencia" id="toc-datos-y-licencia" class="nav-link" data-scroll-target="#datos-y-licencia">Datos y licencia</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyecto_Mineria_Datos</h1>
+<h1 class="title">Anticipación de saturación y recomendación de rutas alternas</h1>
+<p class="subtitle lead">Proyecto Integrador · Almacenes y Minería de Datos · Facultad de Ciencias, UNAM</p>
 </div>
 
 
@@ -106,12 +267,144 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="el-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="el-proyecto">El proyecto</h2>
+<p>Una autoridad de movilidad de la Ciudad de México necesita <strong>anticipar la saturación</strong> de las líneas del Sistema de Transporte Colectivo (STC) Metro y <strong>recomendar rutas alternas</strong> antes de que la aglomeración ocurra, no durante.</p>
+<p>Este sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de <strong>CRISP-DM</strong>. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.</p>
+<div class="caja caja-clave">
+<p><span class="etiqueta">El hallazgo que definió el alcance</span> La base pública de afluencia del Metro tiene granularidad <strong>diaria</strong>, no horaria: sus campos son <code>fecha, anio, mes, linea, estacion, afluencia</code>. El objetivo original —anticipar la hora pico en tiempo real— resultó <strong>estructuralmente inalcanzable</strong> con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia.</p>
+</div>
+</section>
+<section id="estado-de-las-entregas" class="level2">
+<h2 class="anchored" data-anchor-id="estado-de-las-entregas">Estado de las entregas</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Fase CRISP-DM</th>
+<th>Entrega</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Comprensión del negocio</td>
+<td><strong>E0</strong></td>
+<td>✅ Publicada</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Comprensión de los datos</td>
+<td>E1</td>
+<td>⏳ Pendiente</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Preparación de los datos</td>
+<td>E2</td>
+<td>⏳ Pendiente</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Modelado</td>
+<td>E3</td>
+<td>⏳ Pendiente</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Evaluación</td>
+<td>E4</td>
+<td>⏳ Pendiente</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Despliegue</td>
+<td>Reporte y presentación final</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="entrega-e0-comprensión-del-negocio" class="level2">
+<h2 class="anchored" data-anchor-id="entrega-e0-comprensión-del-negocio">Entrega E0 — Comprensión del Negocio</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Página</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="entregas/E0_comprension_negocio/bitacora.qmd">1. Bitácora del stakeholder</a></td>
+<td>Reunión, preguntas, respuestas clave y reflexión del equipo</td>
+</tr>
+<tr class="even">
+<td><a href="entregas/E0_comprension_negocio/canvas.qmd">2. Business Understanding Canvas</a></td>
+<td>Síntesis de una lámina, legible de forma autónoma</td>
+</tr>
+<tr class="odd">
+<td><a href="entregas/E0_comprension_negocio/preguntas.qmd">3. Preguntas de investigación</a></td>
+<td>Cuatro preguntas priorizadas, ligadas a tareas de minería</td>
+</tr>
+<tr class="even">
+<td><a href="entregas/E0_comprension_negocio/criterio_exito.qmd">4. Criterio de éxito</a></td>
+<td>Enunciado de negocio y su traducción a métrica técnica</td>
+</tr>
+<tr class="odd">
+<td><a href="entregas/E0_comprension_negocio/riesgos_supuestos.qmd">5. Supuestos y riesgos</a></td>
+<td>Ocho riesgos con mitigación y seis supuestos explícitos</td>
+</tr>
+<tr class="even">
+<td><a href="entregas/E0_comprension_negocio/uso_ia.qmd">6. Uso de herramientas de IA</a></td>
+<td>Registro explícito conforme a las instrucciones</td>
+</tr>
+<tr class="odd">
+<td><a href="entregas/E0_comprension_negocio/fuentes.qmd">7. Fuentes consultadas</a></td>
+<td>Las trece fuentes que sustentan el ejercicio de rol</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="equipo" class="level2">
+<h2 class="anchored" data-anchor-id="equipo">Equipo</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Integrante</th>
+<th>Rol en el proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="todo">Integrante 1</span></td>
+<td>Analista / traductor técnico</td>
+</tr>
+<tr class="even">
+<td><span class="todo">Integrante 2</span></td>
+<td>Relator y verificación de fuentes</td>
+</tr>
+<tr class="odd">
+<td><span class="todo">Integrante 3</span></td>
+<td>Exploración de datos</td>
+</tr>
+<tr class="even">
+<td><span class="todo">Integrante 4</span></td>
+<td>Factibilidad y calendario de eventos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Profesora:</strong> Jessica Santizo Galicia · <strong>Ayudante de teoría:</strong> Diego Antonio Villalba González · <strong>Ayudante de laboratorio:</strong> Emma Alicia Jiménez Sánchez</p>
+</section>
+<section id="datos-y-licencia" class="level2">
+<h2 class="anchored" data-anchor-id="datos-y-licencia">Datos y licencia</h2>
+<p>Los conjuntos de datos provienen del <a href="https://datos.cdmx.gob.mx">Portal de Datos Abiertos de la Ciudad de México</a>, publicados por la <strong>Secretaría de Movilidad (SEMOVI)</strong> bajo licencia <strong>CC-BY-4.0-ESP</strong>. La atribución es obligatoria y se mantiene en todas las páginas del sitio.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -137,12 +430,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -185,7 +478,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/Fernando-BM\.github\.io\/Proyecto_Mineria_Datos\/");
+        var filterRegex = new RegExp("https:\/\/[usuario]\.github\.io\/Proyecto_Mineria_Datos");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -199,6 +492,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -513,8 +811,22 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Equipo [Nombre] · Facultad de Ciencias, UNAM · Almacenes y Minería de Datos</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Datos: SEMOVI, Portal de Datos Abiertos de la CDMX (CC-BY-4.0-ESP)</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>preguntas</title>
+<title>3. Preguntas de investigación priorizadas – Proyecto Integrador — Minería de Datos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,11 +30,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../entregas/E0_comprension_negocio/criterio_exito.html" rel="next">
+<link href="../../entregas/E0_comprension_negocio/canvas.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -44,13 +47,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f34e1d7bec0cc46f60e6c3c25b045a4b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e3144656cb5138d699b5d8ef7c5b64b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -59,42 +62,320 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Proyecto Integrador — Minería de Datos</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.qmd" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e0-—-comprensión-del-negocio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">E0 — Comprensión del Negocio</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-e0-—-comprensión-del-negocio">    
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/bitacora.html">
+ <span class="dropdown-text">1. Bitácora del stakeholder</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/canvas.html">
+ <span class="dropdown-text">2. Business Understanding Canvas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/preguntas.html">
+ <span class="dropdown-text">3. Preguntas de investigación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/criterio_exito.html">
+ <span class="dropdown-text">4. Criterio de éxito</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/riesgos_supuestos.html">
+ <span class="dropdown-text">5. Supuestos y riesgos</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/uso_ia.html">
+ <span class="dropdown-text">6. Uso de herramientas de IA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../entregas/E0_comprension_negocio/fuentes.html">
+ <span class="dropdown-text">7. Fuentes consultadas</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../entregas/E0_comprension_negocio/bitacora.html">E0 — Comprensión del Negocio</a></li><li class="breadcrumb-item"><a href="../../entregas/E0_comprension_negocio/preguntas.html">3. Preguntas de investigación priorizadas</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inicio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">E0 — Comprensión del Negocio</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/bitacora.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Bitácora de la reunión con el stakeholder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/canvas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Business Understanding Canvas (CRISP-DM)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/preguntas.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3. Preguntas de investigación priorizadas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/criterio_exito.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Criterio de éxito en términos de negocio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/riesgos_supuestos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Supuestos y riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/uso_ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Documentación del uso de herramientas de IA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../entregas/E0_comprension_negocio/fuentes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Fuentes consultadas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base" id="toc-prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base" class="nav-link active" data-scroll-target="#prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base"><span class="pill p-alta">Prioridad 1</span> PI-1. ¿Qué combinaciones de línea, estación y día de la semana concentran los picos de afluencia, y qué tan grande es su desviación respecto de su propio nivel base?</a></li>
+  <li><a href="#prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda" id="toc-prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda" class="nav-link" data-scroll-target="#prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda"><span class="pill p-alta">Prioridad 2</span> PI-2. ¿Es posible anticipar con al menos 24 horas la afluencia diaria por estación con error suficiente para clasificar correctamente los días de alta demanda?</a></li>
+  <li><a href="#prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil" id="toc-prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil" class="nav-link" data-scroll-target="#prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil"><span class="pill p-media">Prioridad 3</span> PI-3. ¿Cuántos perfiles de demanda distintos existen entre las estaciones de la red, y qué estaciones o corredores de Metrobús pueden funcionar como alternativa para cada perfil?</a></li>
+  <li><a href="#prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables" id="toc-prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables" class="nav-link" data-scroll-target="#prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables"><span class="pill p-media">Prioridad 4</span> PI-4. ¿Qué días se comportan como anomalías respecto del patrón esperado, y qué proporción de ellos se explica por eventos identificables?</a></li>
+  <li><a href="#reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio" id="toc-reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio" class="nav-link" data-scroll-target="#reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio"><span class="pill p-baja">Reserva</span> PI-5. ¿La afluencia del Metrobús absorbe demanda de forma medible cuando una línea del Metro reduce o suspende su servicio?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../entregas/E0_comprension_negocio/bitacora.html">E0 — Comprensión del Negocio</a></li><li class="breadcrumb-item"><a href="../../entregas/E0_comprension_negocio/preguntas.html">3. Preguntas de investigación priorizadas</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">3. Preguntas de investigación priorizadas</h1>
+<p class="subtitle lead">Entrega E0 — Comprensión del Negocio</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>:</p>
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-</main> <!-- /main -->
+
+<p><strong>El conjunto priorizado son cuatro preguntas (PI-1 a PI-4)</strong>, conforme a lo solicitado; PI-5 se incluye únicamente como pregunta de reserva y no forma parte de la priorización.</p>
+<p>Las preguntas se ordenan por prioridad según dos criterios: (i) cuánto bloquean al resto del proyecto si no se responden, y (ii) qué tan directamente alimentan la decisión que el stakeholder debe tomar la víspera. Cada una se conecta explícitamente con una tarea de minería de datos.</p>
+<section id="prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base" class="level2">
+<h2 class="anchored" data-anchor-id="prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base"><span class="pill p-alta">Prioridad 1</span> PI-1. ¿Qué combinaciones de línea, estación y día de la semana concentran los picos de afluencia, y qué tan grande es su desviación respecto de su propio nivel base?</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Tarea de minería</strong></td>
+<td><strong>EDA con visualización temporal</strong> y descomposición de estacionalidad múltiple (día de la semana, quincena, mes, periodos vacacionales).</td>
+</tr>
+<tr class="even">
+<td><strong>Por qué es la primera</strong></td>
+<td>Define el <strong>umbral</strong> que separa “día normal” de “día de alta demanda”. Sin ese umbral no existe la variable objetivo de PI-2 y el criterio de éxito no es medible.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cómo se responde</strong></td>
+<td>Serie <code>(fecha, linea, estacion, afluencia)</code> desde 2010; normalización por estación; percentiles condicionados al día de la semana y al periodo del año.<sup class="f">[<a href="../../entregas/E0_comprension_negocio/fuentes.html#f3">3</a>]</sup></td>
+</tr>
+<tr class="even">
+<td><strong>Evidencia de logro</strong></td>
+<td>Umbral documentado y justificado por estación, más el mapa de calor línea × día de la semana.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda"><span class="pill p-alta">Prioridad 2</span> PI-2. ¿Es posible anticipar con al menos 24 horas la afluencia diaria por estación con error suficiente para clasificar correctamente los días de alta demanda?</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Tarea de minería</strong></td>
+<td><strong>Regresión / pronóstico</strong> de serie de tiempo, seguida de <strong>clasificación binaria</strong> por umbral sobre el valor pronosticado.</td>
+</tr>
+<tr class="even">
+<td><strong>Por qué importa</strong></td>
+<td>Es <strong>la</strong> pregunta del proyecto: contiene el criterio de éxito completo. Su respuesta determina si el sistema es accionable o solo descriptivo.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cómo se responde</strong></td>
+<td>Variables de calendario y de estado de servicio; validación temporal estricta; comparación obligatoria contra la línea base ingenua (media del mismo día de la semana en las 4 semanas previas).</td>
+</tr>
+<tr class="even">
+<td><strong>Evidencia de logro</strong></td>
+<td>Recall ≥ 0.70 y precision ≥ 0.70 en la clase de alta demanda, sobre un periodo de prueba posterior al de entrenamiento.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil" class="level2">
+<h2 class="anchored" data-anchor-id="prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil"><span class="pill p-media">Prioridad 3</span> PI-3. ¿Cuántos perfiles de demanda distintos existen entre las estaciones de la red, y qué estaciones o corredores de Metrobús pueden funcionar como alternativa para cada perfil?</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Tarea de minería</strong></td>
+<td><strong>Clustering</strong> de patrones de demanda sobre series normalizadas, más análisis de complementariedad entre Metro y Metrobús.</td>
+</tr>
+<tr class="even">
+<td><strong>Por qué importa</strong></td>
+<td>Es la mitad del enunciado que suele quedarse sin resolver: <em>recomendar rutas alternas</em>. Sin una segmentación de perfiles, la recomendación sería una lista fija hecha a mano.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cómo se responde</strong></td>
+<td>Perfiles semanales y anuales normalizados por estación; agrupamiento; cruce con la base de afluencia de Metrobús para identificar corredores con capacidad remanente en las mismas franjas.<sup class="f">[<a href="../../entregas/E0_comprension_negocio/fuentes.html#f2">2</a>]</sup></td>
+</tr>
+<tr class="even">
+<td><strong>Evidencia de logro</strong></td>
+<td>Catálogo de pares estación ↔︎ alternativa, con la justificación cuantitativa de cada par.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables" class="level2">
+<h2 class="anchored" data-anchor-id="prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables"><span class="pill p-media">Prioridad 4</span> PI-4. ¿Qué días se comportan como anomalías respecto del patrón esperado, y qué proporción de ellos se explica por eventos identificables?</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Tarea de minería</strong></td>
+<td><strong>Detección de anomalías</strong> sobre los residuales del modelo de PI-2.</td>
+</tr>
+<tr class="even">
+<td><strong>Por qué importa</strong></td>
+<td>Separa el ruido explicable del incidente genuino. Si una fracción alta de anomalías se explica por el calendario, esas variables deben volver al modelo; si no, se han encontrado los incidentes operativos que interesan al stakeholder.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cómo se responde</strong></td>
+<td>Residuales estandarizados por estación, contrastados contra el calendario de eventos (cierres de línea, festivos, sismos, eventos masivos, clima), con especial atención al periodo de cierre de la Línea 1.<sup class="f">[<a href="../../entregas/E0_comprension_negocio/fuentes.html#f10">10</a>][<a href="../../entregas/E0_comprension_negocio/fuentes.html#f11">11</a>]</sup></td>
+</tr>
+<tr class="even">
+<td><strong>Evidencia de logro</strong></td>
+<td>Catálogo de anomalías etiquetadas por causa probable y el porcentaje que queda sin explicación.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio" class="level2">
+<h2 class="anchored" data-anchor-id="reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio"><span class="pill p-baja">Reserva</span> PI-5. ¿La afluencia del Metrobús absorbe demanda de forma medible cuando una línea del Metro reduce o suspende su servicio?</h2>
+<p>Pregunta de segundo orden que se abordará <strong>solo si PI-1 a PI-4 se resuelven con holgura</strong>. El cierre prolongado de la Línea 1 entre 2022 y 2025 ofrece un <strong>cuasiexperimento natural</strong> para medir el desplazamiento de demanda entre modos<sup class="f">[<a href="../../entregas/E0_comprension_negocio/fuentes.html#f10">10</a>][<a href="../../entregas/E0_comprension_negocio/fuentes.html#f11">11</a>]</sup>, lo que daría fundamento empírico —y no solo geográfico— a la recomendación de rutas alternas.</p>
+<p><em>Tarea asociada:</em> análisis de correlación y de cambio de nivel entre series de ambos sistemas.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -120,12 +401,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -168,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/Fernando-BM\.github\.io\/Proyecto_Mineria_Datos\/");
+        var filterRegex = new RegExp("https:\/\/[usuario]\.github\.io\/Proyecto_Mineria_Datos");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -182,6 +463,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -495,9 +781,35 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../entregas/E0_comprension_negocio/canvas.html" class="pagination-link" aria-label="2. Business Understanding Canvas (CRISP-DM)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Business Understanding Canvas (CRISP-DM)</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../entregas/E0_comprension_negocio/criterio_exito.html" class="pagination-link" aria-label="4. Criterio de éxito en términos de negocio">
+        <span class="nav-page-text">4. Criterio de éxito en términos de negocio</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Equipo [Nombre] · Facultad de Ciencias, UNAM · Almacenes y Minería de Datos</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Datos: SEMOVI, Portal de Datos Abiertos de la CDMX (CC-BY-4.0-ESP)</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

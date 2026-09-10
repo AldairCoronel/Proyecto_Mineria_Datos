@@ -1,23 +1,459 @@
 [
   {
+    "objectID": "entregas/index.html",
+    "href": "entregas/index.html",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "",
+    "text": "Una autoridad de movilidad de la Ciudad de México necesita anticipar la saturación de las líneas del Sistema de Transporte Colectivo (STC) Metro y recomendar rutas alternas antes de que la aglomeración ocurra, no durante.\nEste sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de CRISP-DM. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.\n\nEl hallazgo que definió el alcance La base pública de afluencia del Metro tiene granularidad diaria, no horaria: sus campos son fecha, anio, mes, linea, estacion, afluencia. El objetivo original —anticipar la hora pico en tiempo real— resultó estructuralmente inalcanzable con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia."
+  },
+  {
+    "objectID": "entregas/index.html#el-proyecto",
+    "href": "entregas/index.html#el-proyecto",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "",
+    "text": "Una autoridad de movilidad de la Ciudad de México necesita anticipar la saturación de las líneas del Sistema de Transporte Colectivo (STC) Metro y recomendar rutas alternas antes de que la aglomeración ocurra, no durante.\nEste sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de CRISP-DM. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.\n\nEl hallazgo que definió el alcance La base pública de afluencia del Metro tiene granularidad diaria, no horaria: sus campos son fecha, anio, mes, linea, estacion, afluencia. El objetivo original —anticipar la hora pico en tiempo real— resultó estructuralmente inalcanzable con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia."
+  },
+  {
+    "objectID": "entregas/index.html#estado-de-las-entregas",
+    "href": "entregas/index.html#estado-de-las-entregas",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Estado de las entregas",
+    "text": "Estado de las entregas\n\n\n\n#\nFase CRISP-DM\nEntrega\nEstado\n\n\n\n\n1\nComprensión del negocio\nE0\n✅ Publicada\n\n\n2\nComprensión de los datos\nE1\n⏳ Pendiente\n\n\n3\nPreparación de los datos\nE2\n⏳ Pendiente\n\n\n4\nModelado\nE3\n⏳ Pendiente\n\n\n5\nEvaluación\nE4\n⏳ Pendiente\n\n\n6\nDespliegue\nReporte y presentación final\n⏳ Pendiente"
+  },
+  {
+    "objectID": "entregas/index.html#entrega-e0-comprensión-del-negocio",
+    "href": "entregas/index.html#entrega-e0-comprensión-del-negocio",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Entrega E0 — Comprensión del Negocio",
+    "text": "Entrega E0 — Comprensión del Negocio\n\n\n\nPágina\nContenido\n\n\n\n\n1. Bitácora del stakeholder\nReunión, preguntas, respuestas clave y reflexión del equipo\n\n\n2. Business Understanding Canvas\nSíntesis de una lámina, legible de forma autónoma\n\n\n3. Preguntas de investigación\nCuatro preguntas priorizadas, ligadas a tareas de minería\n\n\n4. Criterio de éxito\nEnunciado de negocio y su traducción a métrica técnica\n\n\n5. Supuestos y riesgos\nOcho riesgos con mitigación y seis supuestos explícitos\n\n\n6. Uso de herramientas de IA\nRegistro explícito conforme a las instrucciones\n\n\n7. Fuentes consultadas\nLas trece fuentes que sustentan el ejercicio de rol"
+  },
+  {
+    "objectID": "entregas/index.html#equipo",
+    "href": "entregas/index.html#equipo",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Equipo",
+    "text": "Equipo\n\n\n\nIntegrante\nRol en el proyecto\n\n\n\n\nIntegrante 1\nAnalista / traductor técnico\n\n\nIntegrante 2\nRelator y verificación de fuentes\n\n\nIntegrante 3\nExploración de datos\n\n\nIntegrante 4\nFactibilidad y calendario de eventos\n\n\n\nProfesora: Jessica Santizo Galicia · Ayudante de teoría: Diego Antonio Villalba González · Ayudante de laboratorio: Emma Alicia Jiménez Sánchez"
+  },
+  {
+    "objectID": "entregas/index.html#datos-y-licencia",
+    "href": "entregas/index.html#datos-y-licencia",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Datos y licencia",
+    "text": "Datos y licencia\nLos conjuntos de datos provienen del Portal de Datos Abiertos de la Ciudad de México, publicados por la Secretaría de Movilidad (SEMOVI) bajo licencia CC-BY-4.0-ESP. La atribución es obligatoria y se mantiene en todas las páginas del sitio."
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/riesgos_supuestos.html",
+    "href": "entregas/E0_comprension_negocio/riesgos_supuestos.html",
+    "title": "5. Supuestos y riesgos",
+    "section": "",
+    "text": "Ocho riesgos específicos de este proyecto —no genéricos—, cada uno con mitigación propuesta.\n\n\nImpacto: Alto · Probabilidad: Alta (materializado)\nLos campos de la base son fecha, anio, mes, linea, estacion, afluencia.[3] El desglose por hora solo se publicó como índices durante la emergencia de COVID-19.[12] El objetivo original —anticipar la hora pico— es estructuralmente inalcanzable con la fuente principal.\n\nMitigación. Ya mitigado en E0: el alcance se reformuló con el stakeholder a día–estación con 24 h de antelación, que además coincide con su ventana real de decisión. Se envía solicitud formal de la base horaria a datosabiertos@cdmx.gob.mx[1]; el histórico COVID-19 se usa únicamente como referencia estructural del perfil intradía, nunca como insumo de entrenamiento.\n\n\n\n\nImpacto: Alto · Probabilidad: Media\nEl portal advierte explícitamente que “algunos conjuntos de datos pueden incluir actualizaciones retroactivas, por lo que la información histórica puede cambiar en actualizaciones posteriores”.[1] Un resultado obtenido en E2 podría no reproducirse en E5 con la misma consulta.\n\nMitigación. Congelar un snapshot fechado de cada base al inicio del proyecto, registrar su hash SHA-256 y la fecha de descarga, y versionarlo en el repositorio. Todo el pipeline se ejecuta contra la versión congelada. Antes de la entrega final se vuelve a descargar y se documenta la diferencia como hallazgo de calidad de datos.\n\n\n\n\nImpacto: Alto · Probabilidad: Alta\nLa línea estuvo parcial o totalmente fuera de servicio desde el 11 de julio de 2022 y se reabrió por completo hasta Observatorio el 16 de noviembre de 2025.[10][11] Sus estaciones tienen ceros estructurales y la demanda migró a otras líneas. Un modelo entrenado a ciegas aprendería una obra pública como si fuera un patrón de comportamiento.\n\nMitigación. Construir una variable estado_servicio por estación–día a partir del calendario documentado de cierres y reaperturas. Excluir del entrenamiento los tramos suspendidos; segmentar la evaluación antes/después de noviembre de 2025; validación temporal con test exclusivamente posterior a la reapertura. Convertir el episodio en cuasiexperimento para PI-5.\n\n\n\n\nImpacto: Alto · Probabilidad: Media\nLa afluencia mide entradas registradas en torniquete; la saturación es una condición de andén y de vagón. Dos estaciones con la misma afluencia pueden tener niveles de aglomeración muy distintos según transbordos, número de andenes y frecuencia de trenes. El riesgo es entregar un modelo correcto que responde a la pregunta equivocada.\n\nMitigación. Declarar formalmente la definición proxy de saturación en el Canvas y en el reporte, y validarla con el stakeholder en E1. Normalizar por estación en lugar de comparar niveles absolutos entre estaciones. Reportar el score como “riesgo relativo de alta demanda” y no como “nivel de ocupación”.\n\n\n\n\nImpacto: Medio · Probabilidad: Alta\nLa base cubre desde 2010[1] e incluye la caída de movilidad por la pandemia[12], la ampliación de la gratuidad y el cambio de medios de acceso; el desglose por medio de acceso solo existe a partir de 2022, y en Metrobús las actualizaciones posteriores a enero de 2022 se reflejan únicamente en la base desglosada.[1][2] Entrenar sobre los 16 años completos mezclaría regímenes incomparables.\n\nMitigación. Acotar el modelo operativo a 2022 en adelante y usar 2010-2021 solo para el estudio de estacionalidad estructural. Documentar los puntos de cambio de régimen. Verificar en E1 si el conteo total de la base desglosada reconcilia con la base simple en el periodo de traslape.\n\n\n\n\nImpacto: Medio · Probabilidad: Alta\nLos campos linea y estacion son de tipo texto[3] a lo largo de más de quince años de captura. Variantes de acrónimo, acentuación o renombramiento de estaciones romperían silenciosamente cualquier agregación por estación.\n\nMitigación. Auditoría de cardinalidad y de valores distintos como primera tarea de E1; catálogo canónico de estaciones contrastado con la publicación oficial de afluencia por estación y línea del STC[5]; pruebas automáticas que fallen si aparece una llave no catalogada.\n\n\n\n\nImpacto: Medio · Probabilidad: Baja\nLa incorporación de datos de tráfico de Waze fue considerada y descartada: Waze no ofrece API pública; comparte un feed GeoRSS únicamente con socios gubernamentales del programa Waze for Cities, bajo términos que impiden republicar los datos.[13] Diseñar el proyecto asumiendo esa fuente lo dejaría sin insumo a media ejecución — y hacer scraping violaría los términos de la plataforma.\n\nMitigación. Excluir formalmente cualquier dato de Waze del alcance de todas las entregas. Las variables de contexto vial, si se necesitan, se tomarán exclusivamente de fuentes abiertas del propio portal de la CDMX.[12] La restricción queda registrada en el Canvas como requisito, no como preferencia.\n\n\n\n\nImpacto: Bajo · Probabilidad: Media\nDistintas notas atribuyen al STC entre ~1,115 y ~1,171 millones de pasajeros en 2024 a partir de las mismas fuentes oficiales.[7] Usar una cifra de prensa como validación externa podría llevar a “corregir” datos que están correctos.\n\nMitigación. Tratar la base de datos abiertos como única fuente de verdad para todo cálculo; las cifras de prensa se usan solo para contextualizar el problema de negocio, nunca para validar o ajustar los datos. La discrepancia se documenta como observación de calidad de la información pública.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "5. Supuestos y riesgos"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/riesgos_supuestos.html#riesgos-del-proyecto-y-mitigaciones",
+    "href": "entregas/E0_comprension_negocio/riesgos_supuestos.html#riesgos-del-proyecto-y-mitigaciones",
+    "title": "5. Supuestos y riesgos",
+    "section": "",
+    "text": "Ocho riesgos específicos de este proyecto —no genéricos—, cada uno con mitigación propuesta.\n\n\nImpacto: Alto · Probabilidad: Alta (materializado)\nLos campos de la base son fecha, anio, mes, linea, estacion, afluencia.[3] El desglose por hora solo se publicó como índices durante la emergencia de COVID-19.[12] El objetivo original —anticipar la hora pico— es estructuralmente inalcanzable con la fuente principal.\n\nMitigación. Ya mitigado en E0: el alcance se reformuló con el stakeholder a día–estación con 24 h de antelación, que además coincide con su ventana real de decisión. Se envía solicitud formal de la base horaria a datosabiertos@cdmx.gob.mx[1]; el histórico COVID-19 se usa únicamente como referencia estructural del perfil intradía, nunca como insumo de entrenamiento.\n\n\n\n\nImpacto: Alto · Probabilidad: Media\nEl portal advierte explícitamente que “algunos conjuntos de datos pueden incluir actualizaciones retroactivas, por lo que la información histórica puede cambiar en actualizaciones posteriores”.[1] Un resultado obtenido en E2 podría no reproducirse en E5 con la misma consulta.\n\nMitigación. Congelar un snapshot fechado de cada base al inicio del proyecto, registrar su hash SHA-256 y la fecha de descarga, y versionarlo en el repositorio. Todo el pipeline se ejecuta contra la versión congelada. Antes de la entrega final se vuelve a descargar y se documenta la diferencia como hallazgo de calidad de datos.\n\n\n\n\nImpacto: Alto · Probabilidad: Alta\nLa línea estuvo parcial o totalmente fuera de servicio desde el 11 de julio de 2022 y se reabrió por completo hasta Observatorio el 16 de noviembre de 2025.[10][11] Sus estaciones tienen ceros estructurales y la demanda migró a otras líneas. Un modelo entrenado a ciegas aprendería una obra pública como si fuera un patrón de comportamiento.\n\nMitigación. Construir una variable estado_servicio por estación–día a partir del calendario documentado de cierres y reaperturas. Excluir del entrenamiento los tramos suspendidos; segmentar la evaluación antes/después de noviembre de 2025; validación temporal con test exclusivamente posterior a la reapertura. Convertir el episodio en cuasiexperimento para PI-5.\n\n\n\n\nImpacto: Alto · Probabilidad: Media\nLa afluencia mide entradas registradas en torniquete; la saturación es una condición de andén y de vagón. Dos estaciones con la misma afluencia pueden tener niveles de aglomeración muy distintos según transbordos, número de andenes y frecuencia de trenes. El riesgo es entregar un modelo correcto que responde a la pregunta equivocada.\n\nMitigación. Declarar formalmente la definición proxy de saturación en el Canvas y en el reporte, y validarla con el stakeholder en E1. Normalizar por estación en lugar de comparar niveles absolutos entre estaciones. Reportar el score como “riesgo relativo de alta demanda” y no como “nivel de ocupación”.\n\n\n\n\nImpacto: Medio · Probabilidad: Alta\nLa base cubre desde 2010[1] e incluye la caída de movilidad por la pandemia[12], la ampliación de la gratuidad y el cambio de medios de acceso; el desglose por medio de acceso solo existe a partir de 2022, y en Metrobús las actualizaciones posteriores a enero de 2022 se reflejan únicamente en la base desglosada.[1][2] Entrenar sobre los 16 años completos mezclaría regímenes incomparables.\n\nMitigación. Acotar el modelo operativo a 2022 en adelante y usar 2010-2021 solo para el estudio de estacionalidad estructural. Documentar los puntos de cambio de régimen. Verificar en E1 si el conteo total de la base desglosada reconcilia con la base simple en el periodo de traslape.\n\n\n\n\nImpacto: Medio · Probabilidad: Alta\nLos campos linea y estacion son de tipo texto[3] a lo largo de más de quince años de captura. Variantes de acrónimo, acentuación o renombramiento de estaciones romperían silenciosamente cualquier agregación por estación.\n\nMitigación. Auditoría de cardinalidad y de valores distintos como primera tarea de E1; catálogo canónico de estaciones contrastado con la publicación oficial de afluencia por estación y línea del STC[5]; pruebas automáticas que fallen si aparece una llave no catalogada.\n\n\n\n\nImpacto: Medio · Probabilidad: Baja\nLa incorporación de datos de tráfico de Waze fue considerada y descartada: Waze no ofrece API pública; comparte un feed GeoRSS únicamente con socios gubernamentales del programa Waze for Cities, bajo términos que impiden republicar los datos.[13] Diseñar el proyecto asumiendo esa fuente lo dejaría sin insumo a media ejecución — y hacer scraping violaría los términos de la plataforma.\n\nMitigación. Excluir formalmente cualquier dato de Waze del alcance de todas las entregas. Las variables de contexto vial, si se necesitan, se tomarán exclusivamente de fuentes abiertas del propio portal de la CDMX.[12] La restricción queda registrada en el Canvas como requisito, no como preferencia.\n\n\n\n\nImpacto: Bajo · Probabilidad: Media\nDistintas notas atribuyen al STC entre ~1,115 y ~1,171 millones de pasajeros en 2024 a partir de las mismas fuentes oficiales.[7] Usar una cifra de prensa como validación externa podría llevar a “corregir” datos que están correctos.\n\nMitigación. Tratar la base de datos abiertos como única fuente de verdad para todo cálculo; las cifras de prensa se usan solo para contextualizar el problema de negocio, nunca para validar o ajustar los datos. La discrepancia se documenta como observación de calidad de la información pública.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "5. Supuestos y riesgos"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/riesgos_supuestos.html#supuestos-que-el-equipo-asume-explícitamente",
+    "href": "entregas/E0_comprension_negocio/riesgos_supuestos.html#supuestos-que-el-equipo-asume-explícitamente",
+    "title": "5. Supuestos y riesgos",
+    "section": "5.2 Supuestos que el equipo asume explícitamente",
+    "text": "5.2 Supuestos que el equipo asume explícitamente\n\n\n\n#\nSupuesto\nCómo se verificará (o qué pasa si es falso)\n\n\n\n\nS1\nEl portal de datos abiertos mantendrá la publicación mensual de las bases de afluencia durante todo el semestre.[1]\nRegistro mensual de la fecha de última actualización. Si se interrumpe, el proyecto continúa con el snapshot congelado y se documenta el corte.\n\n\nS2\nLa afluencia registrada en torniquete es un proxy estable de la demanda relativa entre estaciones, aun sin medir ocupación.\nSe contrasta el ordenamiento de estaciones con la publicación oficial del STC.[5][6] Si el proxy no se sostiene, el alcance se restringe a pronóstico de afluencia sin interpretación de saturación.\n\n\nS3\nLos patrones de calendario (día de la semana, quincena, periodos vacacionales, días festivos) siguen vigentes tras la reapertura completa de la Línea 1 en noviembre de 2025.[11]\nPrueba de estabilidad comparando los perfiles semanales antes y después de la reapertura. Si difieren, se restringe el entrenamiento al periodo posterior.\n\n\nS4\nEl catálogo de estaciones y líneas es consistente a lo largo del histórico.\nAuditoría de llaves en E1 (ver R6). Si no lo es, se construye una tabla de equivalencias documentada.\n\n\nS5\nEl operador puede efectivamente accionar un aviso emitido con 24 horas de antelación (disponibilidad de parque vehicular y de personal).\nSupuesto tomado del propio stakeholder. Si la ventana real fuera más larga, el horizonte de pronóstico se extiende a 3–7 días, algo que el modelo ya contempla.\n\n\nS6\nLos eventos que explican anomalías (cierres, festivos, eventos masivos) son documentables públicamente con fecha.\nConstrucción del calendario de eventos en E1. Los días sin explicación se reportan como anomalías no atribuidas, sin forzar una causa.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "5. Supuestos y riesgos"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/fuentes.html",
+    "href": "entregas/E0_comprension_negocio/fuentes.html",
+    "title": "7. Fuentes consultadas",
+    "section": "",
+    "text": "Todas las fuentes fueron consultadas y verificadas por el equipo en septiembre de 2026. Las bases de datos se publican bajo licencia CC-BY-4.0-ESP, con atribución a la Secretaría de Movilidad (SEMOVI) del Gobierno de la Ciudad de México.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "7. Fuentes consultadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/fuentes.html#datos-abiertos-y-fuentes-oficiales",
+    "href": "entregas/E0_comprension_negocio/fuentes.html#datos-abiertos-y-fuentes-oficiales",
+    "title": "7. Fuentes consultadas",
+    "section": "Datos abiertos y fuentes oficiales",
+    "text": "Datos abiertos y fuentes oficiales\n[1] SEMOVI — Afluencia diaria del Metro CDMX, Portal de Datos Abiertos de la CDMX. Datos desde enero de 2010, actualización mensual, licencia CC-BY-4.0-ESP; incluye el aviso de actualizaciones retroactivas y el correo de contacto datosabiertos@cdmx.gob.mx. https://datos.cdmx.gob.mx/dataset/afluencia-diaria-del-metro-cdmx\n[2] SEMOVI — Afluencia diaria de Metrobús CDMX, Portal de Datos Abiertos de la CDMX. Datos desde julio de 2005; actualizaciones posteriores a enero de 2022 reflejadas solo en la base desglosada. https://datos.cdmx.gob.mx/dataset/afluencia-diaria-de-metrobus-cdmx\n[3] SEMOVI — recurso Afluencia Diaria del Metro (Simple) y su diccionario de datos: campos fecha, anio, mes, linea, estacion, afluencia; formato CSV. https://datos.cdmx.gob.mx/dataset/afluencia-diaria-del-metro-cdmx/resource/0e8ffe58-28bb-4dde-afcd-e5f5b4de4ccb\n[4] SEMOVI — Afluencia preliminar en transporte público (histórico), Portal de Datos Abiertos de la CDMX. https://datos.cdmx.gob.mx/dataset/?q=afluencia+preliminar\n[5] STC Metro — Afluencia de estación por línea (publicación oficial de cifras de afluencia). https://metro.cdmx.gob.mx/operacion/mas-informacion/afluencia-de-estacion-por-linea\n[12] SEMOVI — Datos de Movilidad (histórico COVID-19), Portal de Datos Abiertos de la CDMX. Índices de afluencia de los organismos de transporte e índices de tránsito de Waze y TomTom durante la pandemia; es el único desglose horario publicado y se presenta como índice, no como conteo por estación. https://datos.cdmx.gob.mx/dataset/movilidad-historico-covid-19",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "7. Fuentes consultadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/fuentes.html#prensa",
+    "href": "entregas/E0_comprension_negocio/fuentes.html#prensa",
+    "title": "7. Fuentes consultadas",
+    "section": "Prensa",
+    "text": "Prensa\n[6] Infobae — Estas fueron las estaciones del metro más transcurridas [sic] durante 2024 (Pantitlán, 41,546,181 accesos anuales). https://www.infobae.com/mexico/2025/01/29/estas-fueron-las-estaciones-del-metro-mas-transcurridas-durante-2024/\n[7] Milenio — Línea del Metro de CdMx que registró más usuarios durante 2024 (Línea 2: 212,233,035 usuarios anuales, ~581,460 diarios). Cifra contrastada con Politico.mx e Infobae; ver riesgo R8. https://www.milenio.com/politica/comunidad/linea-del-metro-de-cdmx-registro-mas-usuarios-durante-2024-cual-es\n[8] El Universal — Caos en el Metro CDMX en hora pico; retrasos y saturación afectan al menos siete líneas. Consultada el DD de septiembre de 2026; el equipo debe registrar la fecha de publicación de la nota al citarla. https://www.eluniversal.com.mx/metropoli/caos-en-el-metro-cdmx-en-hora-pico-retrasos-y-saturacion-afectan-al-menos-siete-lineas/\n[9] El Gráfico — ¿Qué está pasando en la Línea 1 del Metro CDMX? Reportan estaciones colapsadas y trenes detenidos (30 de julio de 2026). https://www.elgrafico.mx/al-dia/2026/07/30/que-esta-pasando-en-la-linea-1-del-metro-cdmx-reportan-estaciones-colapsadas-y-trenes-detenidos/\n[10] El Financiero — Línea 1 del Metro CDMX reabre en su totalidad: así fue su remodelación que tomó más de 3 años (cierre del Tramo I el 11 de julio de 2022; cierre Balderas–Observatorio el 9 de noviembre de 2023). https://www.elfinanciero.com.mx/cdmx/2025/11/16/metro-cdmx-reabre-tramo-juanacatlan-observatorio-asi-fueron-las-remodelaciones-de-la-linea-1-que-tomaron-mas-de-3-anos/\n[11] Infobae — Reapertura Línea 1 del Metro CDMX: a qué hora abrirá todo el servicio de Pantitlán hasta Observatorio (reapertura total el 16 de noviembre de 2025). https://www.infobae.com/mexico/2025/11/14/reapertura-linea-1-del-metro-cdmx-a-que-hora-abrira-todo-el-servicio-de-pantitlan-hasta-observatorio/",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "7. Fuentes consultadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/fuentes.html#términos-de-uso-de-terceros",
+    "href": "entregas/E0_comprension_negocio/fuentes.html#términos-de-uso-de-terceros",
+    "title": "7. Fuentes consultadas",
+    "section": "Términos de uso de terceros",
+    "text": "Términos de uso de terceros\n[13] Waze Partners Help — About the Waze for Cities program y Waze Data Feed specifications: el intercambio de datos ocurre mediante un feed GeoRSS con socios gubernamentales, bajo términos que impiden hacer públicos los datos; no existe API pública abierta. https://support.google.com/waze/partners/answer/10618477 · https://support.google.com/waze/partners/answer/13458165\n\nEvidencia archivada Las capturas y PDF de respaldo de estas fuentes se guardan en la carpeta fuentes/ de esta entrega, para que sigan siendo consultables aunque una URL cambie o desaparezca.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "7. Fuentes consultadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/canvas.html",
+    "href": "entregas/E0_comprension_negocio/canvas.html",
+    "title": "2. Business Understanding Canvas (CRISP-DM)",
+    "section": "",
+    "text": "Equipo Nombre · UNAM Facultad de Ciencias, Almacenes y Minería de Datos · Entrega E0 · DD de septiembre de 2026 · Stakeholder: Subdirección de Planeación del Servicio, STC Metro (rol simulado con fuentes verificables). Esta lámina se lee de forma autónoma, sin el resto del sitio.\n\n\n\n\n\n1 · Objetivo de negocio\nDolor actual. La autoridad de movilidad reacciona a la saturación una vez que ya ocurrió: la aglomeración se detecta por reportes de andén y redes sociales, cuando el refuerzo de servicio ya no puede desplegarse a tiempo. La prensa documenta episodios simultáneos de saturación y retrasos en múltiples líneas en hora pico[8], y también colapsos acotados a una línea.[9]\nProceso impactado. Programación de trenes de refuerzo e intervalos, apertura de accesos, despliegue de personal de andén y comunicación de rutas alternas al público.\nMeta. Pasar de una operación reactiva a una anticipatoria: que el operador sepa, a más tardar a las 20:00 h de la víspera —cuando todavía puede programar un tren de refuerzo—, qué estaciones y líneas presentarán demanda inusualmente alta al día siguiente, y que cada aviso al público llegue acompañado de una alternativa concreta (otra línea del Metro o un corredor de Metrobús).[2]\nBeneficiarios. Personas usuarias del Metro y Metrobús (≈581 mil pasajeros diarios solo en la Línea 2)[7]; jefes de estación; áreas de comunicación y de planeación del servicio.\nHorizonte. Piloto de 3 meses sobre las 3 líneas de mayor afluencia, evaluado dentro del semestre en curso.\n\n\n2 · Criterio de éxito (negocio)\nAl cierre del piloto de 3 meses:\n\n≥ 70 % de los días–estación de alta demanda quedan identificados a más tardar a las 20:00 h de la víspera, dentro de la ventana en que el operador programa refuerzo. Hoy no existe anticipación sistemática documentada: la detección ocurre durante el evento.[8][9]\n≤ 30 % de falsas alarmas sobre el total de avisos que el sistema habría emitido, para no desgastar la credibilidad operativa.\n≥ 2 de cada 3 avisos habrían incluido una ruta alterna concreta y nombrada.\nEl tiempo entre detección y aviso pasa de reactivo a ≈ 24 h de antelación.\n\nVentana de medición: 3 meses continuos, evaluados por simulación retrospectiva sobre la base pública de afluencia — no requiere datos internos.\n\n\n3 · Evaluación de la situación\n\n\nRecursos\n\nAfluencia diaria Metro (SEMOVI, CC-BY-4.0): desde ene-2010, mensual; campos fecha, anio, mes, linea, estacion, afluencia.[1][3]\nAfluencia desglosada por medio de acceso (tarjeta / boleto / gratuidad), desde 2022.[1]\nAfluencia diaria Metrobús: desde jul-2005; actualizaciones post ene-2022 solo en la base desglosada.[2]\nAfluencia preliminar en transporte público.[4]\nCifras oficiales de afluencia por estación y línea del STC.[5]\nEquipo: N estudiantes; Python (pandas, scikit-learn), Git/GitHub, Quarto. Sin costo de infraestructura.\n\n\n\nRequisitos\n\nEntregas parciales ancladas a CRISP-DM a lo largo del semestre; E0 al 11-sep-2026.\nTodo debe ser reproducible desde el repositorio y publicado como sitio Quarto.\nAtribución obligatoria a SEMOVI (licencia CC-BY-4.0-ESP).[1]\nSolo fuentes públicas y descarga directa: sin scraping de plataformas que lo prohíben.[13]\nCómputo limitado a equipos personales: los modelos deben entrenarse en minutos, no en horas.\nEl aviso debe producirse dentro de la ventana de programación de la víspera para ser accionable.\n\n\n\nSupuestos\n\nLa afluencia de torniquete es un proxy estable de la demanda relativa entre estaciones.\nEl portal seguirá publicando mensualmente durante el semestre.[1]\nLos patrones de calendario (día de la semana, quincena, vacaciones, festivos) siguen vigentes tras la reapertura completa de la L1.[11]\nLas llaves linea y estacion son consistentes en el histórico (a verificar en E1).\nEl operador puede accionar un aviso con 24 h de antelación.\n\n\n\nRiesgos\n\nGranularidad diaria: no hay dato horario público → la meta de “hora pico” es inalcanzable. Mit.: reformular a día–estación; solicitar base horaria.[12]\nActualizaciones retroactivas: el histórico puede cambiar.[1] Mit.: snapshot congelado y versionado.\nRuptura estructural L1 (jul-2022 → nov-2025).[10][11] Mit.: indicador de estado de servicio y validación temporal.\nAfluencia ≠ ocupación. Mit.: declarar el proxy; no prometer ocupación.\nÉxito no alcanzable con los datos. Mit.: criterio renegociado en la propia entrevista.\n\n\n\n\n\n4 · Objetivo de minería de datos\nTraducción técnica. Estimar, para cada par (estación, día) con horizonte primario de 1 día (extensible a 7 si el operador ampliara su ventana), la afluencia esperada y la probabilidad de que supere su umbral de alta demanda; y aislar los días cuyo comportamiento no explican el calendario ni la tendencia.\nTareas. (a) EDA temporal — descomposición de estacionalidad múltiple (día de semana, quincena, mes, periodos vacacionales) y auditoría de huecos; (b) regresión / pronóstico de afluencia diaria por estación con variables de calendario y estado de servicio; (c) clasificación binaria día–estación de alta demanda, derivada del umbral sobre el pronóstico; (d) clustering de estaciones por perfil de demanda normalizado, base del catálogo de rutas alternas; (e) detección de anomalías sobre residuales, para identificar incidentes.\nEntregable técnico. Tabla de scoring diario (fecha, linea, estacion, afluencia_esperada, score_saturacion, bandera_alta_demanda), matriz de segmentación de estaciones y catálogo de pares estación↔︎alternativa (Metro/Metrobús).\nFiltros clave. Excluir del entrenamiento los tramos con servicio suspendido; acotar el modelo operativo a 2022 en adelante y usar 2010-2021 solo para el estudio estacional.\n\n\n5 · Éxito técnico\n\nRecall ≥ 0.70 en la clase “alta demanda” — traducción directa del “≥ 70 % identificados en la víspera”.\nPrecision ≥ 0.70 — traduce el “≤ 30 % de falsas alarmas”.\nMAPE ≤ 12 % en el pronóstico diario por estación (líneas del piloto).\nSuperar una línea base ingenua (media del mismo día de la semana en las 4 semanas previas) en al menos 20 % de reducción de error.\nValidación temporal (train pasado / test futuro), nunca aleatoria.\nCoeficiente de silueta interpretable y estable en el clustering de perfiles.\n\n\n\n6 · Plan del proyecto\n\n\nFase 1 — Comprensión y exploración (E1–E2)\nSnapshot congelado de las bases; auditoría de huecos, duplicados y consistencia de llaves linea/estacion; EDA temporal y calendario de eventos (cierres, festivos, vacaciones).\n\n\nFase 2 — Preparación y modelado (E3)\nIngeniería de variables de calendario y estado de servicio; línea base ingenua; modelos de pronóstico y clasificación; clustering de perfiles; detección de anomalías sobre residuales.\n\n\nFase 3 — Revisión con el stakeholder (E4)\nValidación del umbral de alta demanda y del catálogo de rutas alternas; ajuste del balance precision/recall según el costo operativo de una falsa alarma.\n\n\nFase 4 — Piloto simulado y evaluación (E5 / final)\nSimulación retrospectiva del piloto de 3 meses sobre las 3 líneas de mayor afluencia; cálculo del criterio de éxito de negocio; documentación de despliegue y limitaciones.\n\n\n\n\n\nSobre los superíndices Los números remiten a la página de Fuentes consultadas. Se dejan como texto plano dentro del canvas para que la lámina conserve su lectura autónoma al imprimirse.\n\n\n\n\n Volver arriba",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "2. Business Understanding Canvas (CRISP-DM)"
+    ]
+  },
+  {
     "objectID": "entregas/about.html",
     "href": "entregas/about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this site\n\n\n\n Volver arriba"
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html",
+    "href": "entregas/E0_comprension_negocio/bitacora.html",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "",
+    "text": "Modalidad: stakeholder simulado con fuentes verificables\nEl equipo intentó contactar a un interlocutor real del STC Metro y de la Secretaría de Movilidad (SEMOVI) mediante describir aquí el intento real: correo a la Coordinación de Datos Abiertos, solicitud de acceso a la información, contacto académico, etc. durante periodo. Dentro del plazo de esta entrega no fue posible concretar una entrevista con una persona con autoridad operativa sobre el problema, por lo que se optó por la modalidad de stakeholder simulado que las instrucciones permiten.\nRegla que el equipo se impuso: ninguna respuesta atribuida al stakeholder simulado es invención libre. Cada respuesta está anclada a una fuente verificable —el propio portal de datos abiertos de la CDMX, cifras oficiales del STC Metro o notas periodísticas fechadas— indicada con un superíndice que remite a Fuentes consultadas. Cuando la fuente no permite sostener una afirmación, el texto lo dice explícitamente en lugar de rellenar el hueco.\nEl rol simulado es el de un Subdirector de Planeación del Servicio de la Dirección de Transportación del STC Metro: perfil con conocimiento directo de la programación de trenes y personal de andén, y por tanto con autoridad sobre las decisiones que este proyecto pretende apoyar. Se simula también un segundo interlocutor técnico, la Coordinación de Datos Abiertos de SEMOVI, que es la organización que efectivamente publica y mantiene los conjuntos de datos utilizados.[1]",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#datos-de-la-sesión",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#datos-de-la-sesión",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "Datos de la sesión",
+    "text": "Datos de la sesión\n\n\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha\nDD de mes de 2026\n\n\nHorario\n00:00 – 00:00 (XX min)\n\n\nModalidad\nEjercicio de rol documentado (stakeholder simulado con fuentes verificables)\n\n\nLugar / medio\nSesión de trabajo del equipo · Facultad de Ciencias, UNAM / videollamada",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#participantes-y-stakeholders",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#participantes-y-stakeholders",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.1 Participantes y stakeholders",
+    "text": "1.1 Participantes y stakeholders\n\n\n\nNombre / Integrante\nRol en el proyecto\nCuadrante (Poder / Interés)\n\n\n\n\nNombre — Subdirección de Planeación del Servicio, Dirección de Transportación, STC Metro (rol simulado)\nStakeholder principal / patrocinador. Decide refuerzo de trenes, intervalos y despliegue de personal de andén.\nAlto poder / Alto interés — gestionar de cerca\n\n\nNombre — Coordinación de Datos Abiertos, SEMOVI (rol simulado)\nProveedor de datos. Publica y mantiene las bases de afluencia del Metro y Metrobús.[1][2]\nAlto poder / Bajo interés — mantener satisfecho\n\n\nIntegrante 1\nAnalista / traductor técnico — condujo la entrevista\nFacilitador\n\n\nIntegrante 2\nRelator — levantó la bitácora y verificó fuentes\nFacilitador\n\n\nIntegrante 3 / 4\nExploración de datos y validación de factibilidad\nFacilitador\n\n\nPersonas usuarias del Metro y Metrobús\nBeneficiario final del proyecto. No participa en la sesión.\nBajo poder / Alto interés — mantener informado",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#contexto-y-objetivos-de-la-sesión",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#contexto-y-objetivos-de-la-sesión",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.2 Contexto y objetivos de la sesión",
+    "text": "1.2 Contexto y objetivos de la sesión\nEl STC Metro moviliza del orden de mil cien millones de pasajeros al año; solo la Línea 2 (Cuatro Caminos–Taxqueña) registró 212.2 millones de usuarios en 2024, un promedio de unos 581 mil pasajeros diarios, y la estación Pantitlán —nodo de las líneas 1, 5, 9 y A— concentró 41.5 millones de accesos anuales.[5][6][7] Sobre esa escala, la prensa documenta con regularidad episodios de saturación simultánea en varias líneas durante la hora pico matutina, con trenes llenos, avance lento en andén y retrasos[8], así como episodios acotados a una sola línea.[9]\nLa sesión se convocó para entender cómo vive el operador ese fenómeno, qué decisiones toma hoy sin apoyo de datos y qué significaría “éxito” desde su perspectiva, antes de comprometer cualquier objetivo técnico. El equipo llegó con una hipótesis previa —“predecir saturación por hora y en tiempo real”— que se puso deliberadamente a prueba durante la conversación.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#desarrollo-cronológico",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#desarrollo-cronológico",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.3 Desarrollo cronológico",
+    "text": "1.3 Desarrollo cronológico\n\n\n\nHora\nBloque\nPuntos tratados\n\n\n\n\n10:00–10:08\nApertura y alineación\nPresentación del equipo y del curso. Se acuerda que el propósito de la sesión es levantar el problema, no proponer solución técnica. Se confirma que el alcance del semestre es un estudio con datos públicos, sin acceso a sistemas internos.\n\n\n10:08–10:22\nEl problema en palabras del stakeholder\nDescripción del fenómeno de saturación: dónde duele, cuándo, y por qué las medidas actuales llegan tarde. Distinción entre afluencia (entradas registradas) y saturación (condición de andén y tren).\n\n\n10:22–10:36\nDecisiones que hoy se toman sin datos\nProgramación de trenes de refuerzo, apertura de accesos alternos, despliegue de personal y emisión de avisos. Ventana real de decisión y quién la ejecuta.\n\n\n10:36–10:50\nFactibilidad de datos\nRevisión conjunta del portal de datos abiertos: cobertura, granularidad, periodicidad de actualización y licencia. Hallazgo crítico de la sesión: la base pública es diaria, no horaria.[1][3]\n\n\n10:50–11:00\nCierre y compromisos\nReformulación del alcance a un horizonte de anticipación de 24 h. Definición del criterio de éxito y de los próximos pasos.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#preguntas-formuladas-y-respuestas-clave",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#preguntas-formuladas-y-respuestas-clave",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.4 Preguntas formuladas y respuestas clave",
+    "text": "1.4 Preguntas formuladas y respuestas clave\n\nP1. ¿Cómo describiría el problema de saturación tal como lo vive el área, y no como lo cuenta la prensa?\n\n\n“El problema no es que haya mucha gente: eso ya lo sabemos, para eso está el sistema. El problema es que la aglomeración se concentra en un puñado de nodos y en franjas muy estrechas. Pantitlán sola movió más de 41 millones de accesos en 2024 y la Línea 2 más de 212 millones; cuando eso coincide con un incidente en otra línea, el andén se satura en minutos.[6][7] Y cuando la prensa reporta ‘caos en siete líneas en hora pico’, nosotros ya llevamos veinte minutos operando en emergencia.”[8]\n\n\nP2. ¿Qué decisiones toma hoy sin apoyo de datos, y con qué información las toma?\n\n\n“Trenes de refuerzo, intervalos, apertura de torniquetes adicionales y ubicación del personal de andén. Hoy eso se decide con la experiencia del jefe de estación y con reportes que llegan cuando la aglomeración ya existe. Es reacción, no anticipación. Lo que publicamos como dato abierto sirve para rendir cuentas y para planeación anual, pero se actualiza mensualmente[1] — no es una herramienta de operación diaria.”\n\n\nP3. ¿Qué restricciones operativas debemos conocer antes de proponer algo?\n\n\n“Tres. Primera: el parque vehicular y el personal no son elásticos; un tren de refuerzo se programa la víspera, no en el momento. Segunda: no podemos entregar información interna de ocupación ni de conteo por hora; lo que hay disponible es lo que está en el portal. Tercera: la red no ha estado estable. La Línea 1 estuvo parcial o totalmente cerrada desde julio de 2022 y solo se reabrió completa hasta Observatorio el 16 de noviembre de 2025, más de tres años después.[10][11] Cualquier análisis histórico que ignore eso va a estar leyendo obras como si fueran comportamiento de la gente.”\n\n\nP4. ¿Qué datos existen realmente, con qué cobertura y con qué granularidad?\n\n\n“La base de Afluencia diaria del Metro la publica SEMOVI en el portal de datos abiertos con licencia CC-BY-4.0. Cubre desde enero de 2010, se actualiza mensualmente y sus campos son fecha, anio, mes, linea, estacion, afluencia. Existe además una versión desglosada por medio de acceso —tarjeta, boleto y gratuidad— a partir del Plan de Apertura de 2022.[1][3] Metrobús tiene su equivalente, con datos desde julio de 2005, y desde enero de 2022 las actualizaciones se reflejan únicamente en la base desglosada.[2] Hay también una base preliminar de afluencia en transporte público.[4] Lo que no existe públicamente es el desglose por hora: solo se publicó durante la emergencia de COVID-19, y como índices, no como conteo por estación.”[12]\n\n\nP5. Entonces, ¿el objetivo de “predecir la hora pico en tiempo real” es viable con estos datos?\n\n\n“No con lo que está publicado, y prefiero decirlo ahora a decirlo en diciembre. Pero les voy a dar la vuelta: a mí el tiempo real me sirve menos de lo que ustedes creen, porque las palancas que puedo mover —refuerzo, personal, avisos— se programan la noche anterior. Si ustedes me dicen con 24 horas de anticipación ‘mañana estas ocho estaciones van a estar por encima de su nivel normal’, eso sí lo puedo accionar. El tiempo real, sin trenes disponibles, solo me sirve para confirmar el problema.”\n\n\nP6. ¿Qué significaría “éxito” para usted, en sus términos?\n\n\n“Que dejemos de enterarnos por Twitter. Concretamente: que la mayoría de los días de alta demanda estén identificados antes de que empiece el servicio, que el aviso llegue con una alternativa concreta —‘si va a Pantitlán, considere esta línea de Metrobús’— y que podamos medir en cuántos de esos días efectivamente se reforzó el servicio. No necesito un modelo perfecto: necesito uno en el que se pueda confiar lo suficiente como para mover trenes.”\n\n\nP7. ¿Hay algo que debamos evitar hacer?\n\n\n“Dos cosas. No confundan afluencia con ocupación: el torniquete cuenta entradas, no cuántas personas van paradas en el vagón ni dónde se bajan. Y no se metan a raspar datos de aplicaciones de tráfico. Waze no tiene una API pública abierta; comparte un feed con gobiernos dentro del programa Waze for Cities y bajo términos que impiden republicar esos datos.[13] Si alguna vez lo necesitan, se tramita institucionalmente.”\n\n\nP8. ¿Cuál es la fecha o el hito crítico?\n\n\n“Para ustedes, el semestre. Para nosotros, cualquier ventana de alta demanda previsible: regreso a clases, periodos vacacionales, quincenas, eventos masivos. Un piloto de tres meses sobre las líneas de mayor afluencia sería suficiente para saber si esto sirve.”\n\n\nNota de honestidad metodológica Las respuestas P5, P6 y P8 son el componente propiamente simulado del ejercicio: expresan una postura del rol, no un hecho documentado, y por eso no llevan superíndice de fuente. Lo que sí está respaldado son las restricciones materiales sobre las que se apoyan —la granularidad diaria de la base[1][3][12] y la inestabilidad de la red durante el periodo histórico[10][11]—. El equipo distingue explícitamente ambos planos en lugar de presentar la simulación como evidencia.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#decisiones-y-acuerdos",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#decisiones-y-acuerdos",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.5 Decisiones y acuerdos",
+    "text": "1.5 Decisiones y acuerdos\n\nAlcance acordado. Anticipación con 24 horas de antelación de días de alta demanda a nivel línea–estación, más detección de días atípicos. Se descarta explícitamente el pronóstico intradía por inexistencia de datos horarios públicos.\nUnidad de análisis. El par (fecha, línea, estación) con la variable afluencia de la base simple; la base desglosada se reserva para explicar cambios de composición (tarjeta / boleto / gratuidad) a partir de 2022.\nMétrica primaria de negocio. Proporción de días–estación de alta demanda anticipados a más tardar a las 20:00 h de la víspera, dentro de la ventana en que puede programarse refuerzo (ver Criterio de éxito).\nDefinición operativa de “saturación”. Se adopta un proxy declarado: afluencia diaria de una estación que supera de forma significativa su nivel esperado para ese día de la semana y periodo del año. Se documenta que no equivale a ocupación del tren.\nFuera de alcance para todo el proyecto. Datos de Waze o de cualquier proveedor sin API abierta; cualquier forma de scraping de plataformas que lo prohíben.[13]\nAlcance del piloto. Tres líneas de mayor afluencia y una ventana de tres meses, evaluada por simulación retrospectiva sobre la base pública.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#pendientes-y-próximos-pasos",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#pendientes-y-próximos-pasos",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.6 Pendientes y próximos pasos",
+    "text": "1.6 Pendientes y próximos pasos\n\n\n\nAcción / entregable\nResponsable\nFecha límite\n\n\n\n\nDescargar y congelar un snapshot fechado de las bases de afluencia de Metro y Metrobús, con registro del hash y de la fecha de descarga\nIntegrante 3\nDD de septiembre, 2026\n\n\nEnviar solicitud formal de la base horaria a datosabiertos@cdmx.gob.mx y documentar la respuesta[1]\nIntegrante 2\nDD de septiembre, 2026\n\n\nPublicar el sitio Quarto con las páginas de E0 y la URL en el README.md\nIntegrante 1\n11 de septiembre, 2026\n\n\nConstruir el calendario de eventos (cierres de línea, festivos, periodos vacacionales, sismos, eventos masivos) para explicar anomalías en E1\nIntegrante 4\nEntrega E1\n\n\nValidar con el stakeholder la definición proxy de saturación y el umbral de “alta demanda”\nEquipo completo\nEntrega E1",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/bitacora.html#reflexión-del-equipo-qué-cambió-tras-la-entrevista",
+    "href": "entregas/E0_comprension_negocio/bitacora.html#reflexión-del-equipo-qué-cambió-tras-la-entrevista",
+    "title": "1. Bitácora de la reunión con el stakeholder",
+    "section": "1.7 Reflexión del equipo: qué cambió tras la entrevista",
+    "text": "1.7 Reflexión del equipo: qué cambió tras la entrevista\n\n1. El problema no era el que traíamos. Llegamos con la idea de “predecir saturación en tiempo real por hora”. Salimos con algo distinto y más honesto: la fuente pública es diaria[3], de modo que el objetivo original no era alcanzable. Detectarlo en E0 —y no en la fase de modelado— es probablemente el resultado más valioso de esta entrega.\n2. El tiempo real era una preferencia nuestra, no una necesidad del operador. El hallazgo que reordenó todo el proyecto fue que las palancas del stakeholder (refuerzo de trenes, personal, avisos) se programan la víspera. Una alerta a 24 horas es más accionable que una alerta instantánea, porque coincide con la ventana en que él puede decidir. La restricción de datos y la necesidad real terminaron apuntando al mismo lugar.\n3. “Saturación” y “afluencia” no son lo mismo. El torniquete cuenta entradas; no mide ocupación del vagón ni destinos. Esto nos obliga a declarar un proxy explícito y a no prometer lo que el dato no puede sostener. Es también la razón por la que el criterio de éxito se formuló sobre anticipación y no sobre reducción de aglomeración: lo segundo no podríamos medirlo.\n4. La historia de la red está dentro de los datos. El cierre y la modernización de la Línea 1 entre julio de 2022 y noviembre de 2025[10][11] deja ceros estructurales y demanda desplazada. Antes de la entrevista lo habríamos leído como estacionalidad; ahora es una variable de control obligatoria.\n5. Aprendimos a leer el aviso legal del portal. La advertencia de que los conjuntos “pueden incluir actualizaciones retroactivas, por lo que la información histórica puede cambiar”[1] convierte la reproducibilidad en un requisito de diseño, no en una buena intención.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "1. Bitácora de la reunión con el stakeholder"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/criterio_exito.html",
+    "href": "entregas/E0_comprension_negocio/criterio_exito.html",
+    "title": "4. Criterio de éxito en términos de negocio",
+    "section": "",
+    "text": "Enunciado\n\n“Al cierre de un piloto de tres meses sobre las tres líneas de mayor afluencia, al menos 7 de cada 10 días–estación que resulten de alta demanda habrán sido identificados a más tardar a las 20:00 h de la víspera —es decir, dentro de la ventana en que todavía puede programarse un tren de refuerzo—, con no más de 3 de cada 10 avisos que resulten falsas alarmas, y con al menos 2 de cada 3 avisos acompañados de una ruta alterna concreta y nombrada.”",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "4. Criterio de éxito en términos de negocio"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/criterio_exito.html#por-qué-este-enunciado-es-verificable",
+    "href": "entregas/E0_comprension_negocio/criterio_exito.html#por-qué-este-enunciado-es-verificable",
+    "title": "4. Criterio de éxito en términos de negocio",
+    "section": "4.1 Por qué este enunciado es verificable",
+    "text": "4.1 Por qué este enunciado es verificable\n\nTiene línea base declarada. El stakeholder describe la práctica actual como reactiva —la aglomeración se conoce por reportes de andén y redes sociales[8][9]—, pero el equipo no dispone de una medición institucional de la anticipación actual. Por eso la línea base operativa que se usará para comparar es cuantificable y pública: la regla ingenua (media del mismo día de la semana en las 4 semanas previas), y el criterio se juzga como mejora sobre ella, no sobre un “0 %” que no podríamos acreditar.\nTiene unidad de medida y denominador. La unidad es el día–estación; el denominador son los días–estación que superan el umbral definido en PI-1, calculable a posteriori sobre la misma base pública.\nTiene ventana temporal y es computable sin datos internos. Tres meses continuos sobre tres líneas nombradas, evaluados por simulación retrospectiva: se reproduce qué habría anticipado el sistema cada víspera y se contrasta con la afluencia efectivamente publicada. No depende del registro operativo de refuerzos, al que el equipo no tiene acceso.\nTiene un contracriterio. El límite de falsas alarmas impide alcanzar el 70 % trivialmente marcando todo como alta demanda: obliga al sistema a discriminar.\nEstá en el lenguaje del stakeholder. Habla de avisos, de horas de antelación y de rutas alternas — no de F1-score.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "4. Criterio de éxito en términos de negocio"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/criterio_exito.html#vínculo-con-la-métrica-técnica",
+    "href": "entregas/E0_comprension_negocio/criterio_exito.html#vínculo-con-la-métrica-técnica",
+    "title": "4. Criterio de éxito en términos de negocio",
+    "section": "4.2 Vínculo con la métrica técnica",
+    "text": "4.2 Vínculo con la métrica técnica\nA cerrar en las fases de modelado y evaluación:\n\n\n\n\n\n\n\n\nCriterio de negocio\nMétrica técnica equivalente\nUmbral objetivo\n\n\n\n\n7 de cada 10 días de alta demanda identificados en la víspera\nRecall (sensibilidad) de la clase “alta demanda”\n≥ 0.70\n\n\nNo más de 3 de cada 10 avisos son falsa alarma\nPrecision de la clase “alta demanda”\n≥ 0.70\n\n\nEl pronóstico es suficientemente fino para dimensionar el refuerzo\nMAPE del pronóstico diario por estación\n≤ 12 %\n\n\nEl sistema aporta valor sobre “hacer lo de siempre”\nMejora relativa contra la línea base ingenua\n≥ 20 % de reducción de error\n\n\n2 de cada 3 avisos llevan una alternativa concreta\nCobertura del catálogo (PI-3) sobre las estaciones que generan avisos, no sobre todas las del piloto\n≥ 67 % de las estaciones con aviso\n\n\n\n\nAdvertencia declarada al stakeholder\nEl criterio mide anticipación, no reducción de aglomeración. Con datos públicos de afluencia no es posible acreditar que el andén estuvo menos lleno, porque el torniquete cuenta entradas y no ocupación.\nFormular el éxito como “reducir un 20 % la saturación” habría producido un enunciado atractivo pero no verificable con los datos disponibles — precisamente la causa de penalización que las instrucciones señalan. La reducción de aglomeración solo podría evaluarse en un despliegue real con datos operativos internos, lo que se documenta como trabajo futuro.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "4. Criterio de éxito en términos de negocio"
+    ]
   },
   {
     "objectID": "entregas/E0_comprension_negocio/preguntas.html",
     "href": "entregas/E0_comprension_negocio/preguntas.html",
-    "title": "",
+    "title": "3. Preguntas de investigación priorizadas",
     "section": "",
-    "text": ":"
+    "text": "El conjunto priorizado son cuatro preguntas (PI-1 a PI-4), conforme a lo solicitado; PI-5 se incluye únicamente como pregunta de reserva y no forma parte de la priorización.\nLas preguntas se ordenan por prioridad según dos criterios: (i) cuánto bloquean al resto del proyecto si no se responden, y (ii) qué tan directamente alimentan la decisión que el stakeholder debe tomar la víspera. Cada una se conecta explícitamente con una tarea de minería de datos.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
   },
   {
-    "objectID": "entregas/index.html",
-    "href": "entregas/index.html",
-    "title": "Proyecto_Mineria_Datos",
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html#prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base",
+    "href": "entregas/E0_comprension_negocio/preguntas.html#prioridad-1-pi-1.-qué-combinaciones-de-línea-estación-y-día-de-la-semana-concentran-los-picos-de-afluencia-y-qué-tan-grande-es-su-desviación-respecto-de-su-propio-nivel-base",
+    "title": "3. Preguntas de investigación priorizadas",
+    "section": "Prioridad 1 PI-1. ¿Qué combinaciones de línea, estación y día de la semana concentran los picos de afluencia, y qué tan grande es su desviación respecto de su propio nivel base?",
+    "text": "Prioridad 1 PI-1. ¿Qué combinaciones de línea, estación y día de la semana concentran los picos de afluencia, y qué tan grande es su desviación respecto de su propio nivel base?\n\n\n\nTarea de minería\nEDA con visualización temporal y descomposición de estacionalidad múltiple (día de la semana, quincena, mes, periodos vacacionales).\n\n\nPor qué es la primera\nDefine el umbral que separa “día normal” de “día de alta demanda”. Sin ese umbral no existe la variable objetivo de PI-2 y el criterio de éxito no es medible.\n\n\nCómo se responde\nSerie (fecha, linea, estacion, afluencia) desde 2010; normalización por estación; percentiles condicionados al día de la semana y al periodo del año.[3]\n\n\nEvidencia de logro\nUmbral documentado y justificado por estación, más el mapa de calor línea × día de la semana.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html#prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda",
+    "href": "entregas/E0_comprension_negocio/preguntas.html#prioridad-2-pi-2.-es-posible-anticipar-con-al-menos-24-horas-la-afluencia-diaria-por-estación-con-error-suficiente-para-clasificar-correctamente-los-días-de-alta-demanda",
+    "title": "3. Preguntas de investigación priorizadas",
+    "section": "Prioridad 2 PI-2. ¿Es posible anticipar con al menos 24 horas la afluencia diaria por estación con error suficiente para clasificar correctamente los días de alta demanda?",
+    "text": "Prioridad 2 PI-2. ¿Es posible anticipar con al menos 24 horas la afluencia diaria por estación con error suficiente para clasificar correctamente los días de alta demanda?\n\n\n\n\n\n\n\nTarea de minería\nRegresión / pronóstico de serie de tiempo, seguida de clasificación binaria por umbral sobre el valor pronosticado.\n\n\nPor qué importa\nEs la pregunta del proyecto: contiene el criterio de éxito completo. Su respuesta determina si el sistema es accionable o solo descriptivo.\n\n\nCómo se responde\nVariables de calendario y de estado de servicio; validación temporal estricta; comparación obligatoria contra la línea base ingenua (media del mismo día de la semana en las 4 semanas previas).\n\n\nEvidencia de logro\nRecall ≥ 0.70 y precision ≥ 0.70 en la clase de alta demanda, sobre un periodo de prueba posterior al de entrenamiento.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html#prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil",
+    "href": "entregas/E0_comprension_negocio/preguntas.html#prioridad-3-pi-3.-cuántos-perfiles-de-demanda-distintos-existen-entre-las-estaciones-de-la-red-y-qué-estaciones-o-corredores-de-metrobús-pueden-funcionar-como-alternativa-para-cada-perfil",
+    "title": "3. Preguntas de investigación priorizadas",
+    "section": "Prioridad 3 PI-3. ¿Cuántos perfiles de demanda distintos existen entre las estaciones de la red, y qué estaciones o corredores de Metrobús pueden funcionar como alternativa para cada perfil?",
+    "text": "Prioridad 3 PI-3. ¿Cuántos perfiles de demanda distintos existen entre las estaciones de la red, y qué estaciones o corredores de Metrobús pueden funcionar como alternativa para cada perfil?\n\n\n\nTarea de minería\nClustering de patrones de demanda sobre series normalizadas, más análisis de complementariedad entre Metro y Metrobús.\n\n\nPor qué importa\nEs la mitad del enunciado que suele quedarse sin resolver: recomendar rutas alternas. Sin una segmentación de perfiles, la recomendación sería una lista fija hecha a mano.\n\n\nCómo se responde\nPerfiles semanales y anuales normalizados por estación; agrupamiento; cruce con la base de afluencia de Metrobús para identificar corredores con capacidad remanente en las mismas franjas.[2]\n\n\nEvidencia de logro\nCatálogo de pares estación ↔︎ alternativa, con la justificación cuantitativa de cada par.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html#prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables",
+    "href": "entregas/E0_comprension_negocio/preguntas.html#prioridad-4-pi-4.-qué-días-se-comportan-como-anomalías-respecto-del-patrón-esperado-y-qué-proporción-de-ellos-se-explica-por-eventos-identificables",
+    "title": "3. Preguntas de investigación priorizadas",
+    "section": "Prioridad 4 PI-4. ¿Qué días se comportan como anomalías respecto del patrón esperado, y qué proporción de ellos se explica por eventos identificables?",
+    "text": "Prioridad 4 PI-4. ¿Qué días se comportan como anomalías respecto del patrón esperado, y qué proporción de ellos se explica por eventos identificables?\n\n\n\nTarea de minería\nDetección de anomalías sobre los residuales del modelo de PI-2.\n\n\nPor qué importa\nSepara el ruido explicable del incidente genuino. Si una fracción alta de anomalías se explica por el calendario, esas variables deben volver al modelo; si no, se han encontrado los incidentes operativos que interesan al stakeholder.\n\n\nCómo se responde\nResiduales estandarizados por estación, contrastados contra el calendario de eventos (cierres de línea, festivos, sismos, eventos masivos, clima), con especial atención al periodo de cierre de la Línea 1.[10][11]\n\n\nEvidencia de logro\nCatálogo de anomalías etiquetadas por causa probable y el porcentaje que queda sin explicación.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/preguntas.html#reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio",
+    "href": "entregas/E0_comprension_negocio/preguntas.html#reserva-pi-5.-la-afluencia-del-metrobús-absorbe-demanda-de-forma-medible-cuando-una-línea-del-metro-reduce-o-suspende-su-servicio",
+    "title": "3. Preguntas de investigación priorizadas",
+    "section": "Reserva PI-5. ¿La afluencia del Metrobús absorbe demanda de forma medible cuando una línea del Metro reduce o suspende su servicio?",
+    "text": "Reserva PI-5. ¿La afluencia del Metrobús absorbe demanda de forma medible cuando una línea del Metro reduce o suspende su servicio?\nPregunta de segundo orden que se abordará solo si PI-1 a PI-4 se resuelven con holgura. El cierre prolongado de la Línea 1 entre 2022 y 2025 ofrece un cuasiexperimento natural para medir el desplazamiento de demanda entre modos[10][11], lo que daría fundamento empírico —y no solo geográfico— a la recomendación de rutas alternas.\nTarea asociada: análisis de correlación y de cambio de nivel entre series de ambos sistemas.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "3. Preguntas de investigación priorizadas"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/uso_ia.html",
+    "href": "entregas/E0_comprension_negocio/uso_ia.html",
+    "title": "6. Documentación del uso de herramientas de IA",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Esta página debe reflejar el uso real del equipo El registro que sigue es un borrador estructurado: cada equipo debe completar los campos resaltados y eliminar las filas que no correspondan. No se penaliza usar un LLM; se penaliza no documentarlo u ocultarlo. Si el equipo no usó ninguna herramienta de IA, esta página debe decir literalmente “No se utilizaron herramientas de IA en esta entrega” y borrarse todo lo demás.\nEl equipo utilizó un modelo de lenguaje como apoyo en esta entrega. Ninguna salida se incorporó sin revisión.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "6. Documentación del uso de herramientas de IA"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/uso_ia.html#registro-de-usos",
+    "href": "entregas/E0_comprension_negocio/uso_ia.html#registro-de-usos",
+    "title": "6. Documentación del uso de herramientas de IA",
+    "section": "Registro de usos",
+    "text": "Registro de usos\n\nUso 1 — Estructuración de los entregables\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nHerramienta\nClaude (Anthropic) — modelo: especificar\n\n\nFecha\nDD de mes de 2026\n\n\nTarea\nEstructurar los cinco entregables de E0 a partir del PDF de instrucciones y de las dos plantillas del curso.\n\n\nPrompt (resumen fiel)\n“Lee el PDF de instrucciones de la entrega E0, la plantilla de bitácora y la plantilla del Business Understanding Canvas. Redacta los entregables para el tema 8 (predicción de retrasos y saturación en el transporte público), con stakeholder simulado sustentado en fuentes verificables.”\n\n\nQué hizo el equipo con la salida\nSe revisó que cada sección correspondiera a un entregable de la rúbrica y a sus criterios mínimos. Se ajustaron indicar los cambios que el equipo realmente haya hecho: nombres, fechas, alcance, redacción.\n\n\n\n\n\nUso 2 — Búsqueda y verificación de fuentes\n\n\n\nCampo\nDetalle\n\n\n\n\nHerramienta\nClaude (Anthropic), con búsqueda web\n\n\nFecha\nDD de mes de 2026\n\n\nTarea\nLocalizar y verificar las fuentes que sustentan las respuestas del stakeholder simulado.\n\n\nPrompt (resumen fiel)\nConsultas sobre: estructura y cobertura de las bases de afluencia de Metro y Metrobús en el portal de datos abiertos; afluencia oficial por línea y estación en 2024; cronología del cierre y reapertura de la Línea 1; condiciones de acceso a datos de Waze.\n\n\nQué hizo el equipo con la salida\nCada fuente se abrió y se leyó directamente. Se descartaron las afirmaciones no verificables y se detectó una discrepancia entre cifras de prensa sobre la afluencia total de 2024, que se documentó como riesgo R8 en lugar de elegir una cifra arbitrariamente.\n\n\n\n\n\nUso 3 — Redacción del ejercicio de rol\n\n\n\nCampo\nDetalle\n\n\n\n\nHerramienta\nClaude (Anthropic)\n\n\nFecha\nDD de mes de 2026\n\n\nTarea\nRedacción de las respuestas del stakeholder simulado.\n\n\nPrompt (resumen fiel)\n“Genera las respuestas del stakeholder a partir únicamente de las fuentes citadas; si una fuente no sostiene una afirmación, dilo explícitamente en lugar de rellenar.”\n\n\nQué hizo el equipo con la salida\nEl equipo verificó una por una que cada respuesta tuviera su superíndice de fuente, e identificó que P5, P6 y P8 son postura del rol y no hecho documentado; esa distinción se hizo explícita en la bitácora. Indicar aquí las respuestas que el equipo reformuló o eliminó tras la revisión.\n\n\n\n\n\nUso 4 — Otra herramienta, si aplica\n\n\n\nCampo\nDetalle\n\n\n\n\nHerramienta\nNombre y modelo\n\n\nFecha\nDD de mes de 2026\n\n\nTarea\nTarea\n\n\nPrompt\nPrompt\n\n\nQué hizo el equipo con la salida\nRevisión realizada",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "6. Documentación del uso de herramientas de IA"
+    ]
+  },
+  {
+    "objectID": "entregas/E0_comprension_negocio/uso_ia.html#verificación-humana-realizada-por-el-equipo",
+    "href": "entregas/E0_comprension_negocio/uso_ia.html#verificación-humana-realizada-por-el-equipo",
+    "title": "6. Documentación del uso de herramientas de IA",
+    "section": "Verificación humana realizada por el equipo",
+    "text": "Verificación humana realizada por el equipo\n\n\nSe abrió y se leyó cada una de las trece fuentes; las URL se comprobaron una a una.\nSe confirmaron directamente en el portal los campos de la base (fecha, anio, mes, linea, estacion, afluencia), su cobertura desde enero de 2010 y su licencia CC-BY-4.0-ESP.\nSe validó que el criterio de éxito estuviera formulado en lenguaje de negocio y no en métricas de modelo, y que existiera su equivalencia técnica.\nSe revisó que los riesgos fueran específicos de este proyecto y no genéricos, y que cada uno tuviera mitigación.\nSe separó explícitamente lo documentado de lo simulado en las respuestas del stakeholder, en vez de presentar todo como respaldado.\nAñadir aquí cualquier corrección de fondo que el equipo haya hecho al borrador: es lo que acredita la revisión crítica.",
+    "crumbs": [
+      "Inicio",
+      "E0 — Comprensión del Negocio",
+      "6. Documentación del uso de herramientas de IA"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "",
+    "text": "Una autoridad de movilidad de la Ciudad de México necesita anticipar la saturación de las líneas del Sistema de Transporte Colectivo (STC) Metro y recomendar rutas alternas antes de que la aglomeración ocurra, no durante.\nEste sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de CRISP-DM. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.\n\nEl hallazgo que definió el alcance La base pública de afluencia del Metro tiene granularidad diaria, no horaria: sus campos son fecha, anio, mes, linea, estacion, afluencia. El objetivo original —anticipar la hora pico en tiempo real— resultó estructuralmente inalcanzable con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia.",
+    "crumbs": [
+      "Inicio"
+    ]
+  },
+  {
+    "objectID": "index.html#el-proyecto",
+    "href": "index.html#el-proyecto",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "",
+    "text": "Una autoridad de movilidad de la Ciudad de México necesita anticipar la saturación de las líneas del Sistema de Transporte Colectivo (STC) Metro y recomendar rutas alternas antes de que la aglomeración ocurra, no durante.\nEste sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de CRISP-DM. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.\n\nEl hallazgo que definió el alcance La base pública de afluencia del Metro tiene granularidad diaria, no horaria: sus campos son fecha, anio, mes, linea, estacion, afluencia. El objetivo original —anticipar la hora pico en tiempo real— resultó estructuralmente inalcanzable con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia.",
+    "crumbs": [
+      "Inicio"
+    ]
+  },
+  {
+    "objectID": "index.html#estado-de-las-entregas",
+    "href": "index.html#estado-de-las-entregas",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Estado de las entregas",
+    "text": "Estado de las entregas\n\n\n\n#\nFase CRISP-DM\nEntrega\nEstado\n\n\n\n\n1\nComprensión del negocio\nE0\n✅ Publicada\n\n\n2\nComprensión de los datos\nE1\n⏳ Pendiente\n\n\n3\nPreparación de los datos\nE2\n⏳ Pendiente\n\n\n4\nModelado\nE3\n⏳ Pendiente\n\n\n5\nEvaluación\nE4\n⏳ Pendiente\n\n\n6\nDespliegue\nReporte y presentación final\n⏳ Pendiente",
+    "crumbs": [
+      "Inicio"
+    ]
+  },
+  {
+    "objectID": "index.html#entrega-e0-comprensión-del-negocio",
+    "href": "index.html#entrega-e0-comprensión-del-negocio",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Entrega E0 — Comprensión del Negocio",
+    "text": "Entrega E0 — Comprensión del Negocio\n\n\n\nPágina\nContenido\n\n\n\n\n1. Bitácora del stakeholder\nReunión, preguntas, respuestas clave y reflexión del equipo\n\n\n2. Business Understanding Canvas\nSíntesis de una lámina, legible de forma autónoma\n\n\n3. Preguntas de investigación\nCuatro preguntas priorizadas, ligadas a tareas de minería\n\n\n4. Criterio de éxito\nEnunciado de negocio y su traducción a métrica técnica\n\n\n5. Supuestos y riesgos\nOcho riesgos con mitigación y seis supuestos explícitos\n\n\n6. Uso de herramientas de IA\nRegistro explícito conforme a las instrucciones\n\n\n7. Fuentes consultadas\nLas trece fuentes que sustentan el ejercicio de rol",
+    "crumbs": [
+      "Inicio"
+    ]
+  },
+  {
+    "objectID": "index.html#equipo",
+    "href": "index.html#equipo",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Equipo",
+    "text": "Equipo\n\n\n\nIntegrante\nRol en el proyecto\n\n\n\n\nIntegrante 1\nAnalista / traductor técnico\n\n\nIntegrante 2\nRelator y verificación de fuentes\n\n\nIntegrante 3\nExploración de datos\n\n\nIntegrante 4\nFactibilidad y calendario de eventos\n\n\n\nProfesora: Jessica Santizo Galicia · Ayudante de teoría: Diego Antonio Villalba González · Ayudante de laboratorio: Emma Alicia Jiménez Sánchez",
+    "crumbs": [
+      "Inicio"
+    ]
+  },
+  {
+    "objectID": "index.html#datos-y-licencia",
+    "href": "index.html#datos-y-licencia",
+    "title": "Anticipación de saturación y recomendación de rutas alternas",
+    "section": "Datos y licencia",
+    "text": "Datos y licencia\nLos conjuntos de datos provienen del Portal de Datos Abiertos de la Ciudad de México, publicados por la Secretaría de Movilidad (SEMOVI) bajo licencia CC-BY-4.0-ESP. La atribución es obligatoria y se mantiene en todas las páginas del sitio.",
+    "crumbs": [
+      "Inicio"
+    ]
   }
 ]
