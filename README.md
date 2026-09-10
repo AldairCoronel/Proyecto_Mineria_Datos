@@ -1,4 +1,4 @@
-# Proyecto Integrador — Almacenes y Minería de Datos
+# Proyecto Integrador - Almacenes y Minería de Datos
 
 **Anticipación de saturación y recomendación de rutas alternas en la red del STC Metro y Metrobús de la CDMX**
 
@@ -7,18 +7,16 @@ Ayudante de teoría: Diego Antonio Villalba González · Ayudante de laboratorio
 
 ## 🌐 Sitio desplegado
 
-**https://[usuario].github.io/Proyecto_Mineria_Datos**
-
-> ⚠️ **Pendiente:** sustituir `[usuario]` por el usuario u organización de GitHub, aquí y en `_quarto.yml`. La URL pública debe estar en este archivo **antes de la fecha límite**; un repositorio sin sitio desplegado se considera entrega incompleta.
+**https://fernando-bm.github.io/Proyecto_Mineria_Datos**
 
 ## Equipo
 
 | Integrante | Rol |
 |------------|-----|
-| [Integrante 1] | Analista / traductor técnico |
-| [Integrante 2] | Relator y verificación de fuentes |
-| [Integrante 3] | Exploración de datos |
-| [Integrante 4] | Factibilidad y calendario de eventos |
+| Aldair Coronel Ruiz | Analista / traductor técnico |
+| Fernando Bernal Martínez | Relator y verificación de fuentes |
+| Luis Alberto Hernández Aguilar | Exploración de datos |
+| Tania Ramírez Plascencia | Factibilidad y calendario de eventos |
 
 ## Entregas
 
@@ -31,7 +29,7 @@ Ayudante de teoría: Diego Antonio Villalba González · Ayudante de laboratorio
 | 5 | Evaluación | E4 | ⏳ |
 | 6 | Despliegue | Reporte y presentación final | ⏳ |
 
-### E0 — Comprensión del Negocio
+### E0 - Comprensión del Negocio
 
 | Página | Archivo |
 |--------|---------|
@@ -85,7 +83,7 @@ git init
 git add .
 git commit -m "E0: comprensión del negocio"
 git branch -M main
-git remote add origin https://github.com/[usuario]/Proyecto_Mineria_Datos.git
+git remote add origin https://github.com/Fernando-BM/Proyecto_Mineria_Datos.git
 git push -u origin main
 ```
 

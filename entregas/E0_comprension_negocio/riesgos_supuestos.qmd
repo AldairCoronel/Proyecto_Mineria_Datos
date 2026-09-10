@@ -1,19 +1,19 @@
 ---
 title: "5. Supuestos y riesgos"
-subtitle: "Entrega E0 — Comprensión del Negocio"
+subtitle: "Entrega E0 - Comprensión del Negocio"
 ---
 
 ## 5.1 Riesgos del proyecto y mitigaciones
 
-Ocho riesgos específicos de este proyecto —no genéricos—, cada uno con mitigación propuesta.
+Ocho riesgos específicos de este proyecto, no genéricos, cada uno con mitigación propuesta.
 
 ### R1 · La granularidad publicada es diaria, no horaria {#r1}
 
 **Impacto: Alto · Probabilidad: Alta (materializado)**
 
-Los campos de la base son `fecha, anio, mes, linea, estacion, afluencia`.<sup class="f">[[3](fuentes.qmd#f3)]</sup> El desglose por hora solo se publicó como índices durante la emergencia de COVID-19.<sup class="f">[[12](fuentes.qmd#f12)]</sup> El objetivo original —anticipar la hora pico— es **estructuralmente inalcanzable** con la fuente principal.
+Los campos de la base son `fecha, anio, mes, linea, estacion, afluencia`.<sup class="f">[[3](fuentes.qmd#f3)]</sup> El desglose por hora solo se publicó como índices durante la emergencia de COVID-19.<sup class="f">[[12](fuentes.qmd#f12)]</sup> El objetivo original (anticipar la hora pico) es **estructuralmente inalcanzable** con la fuente principal.
 
-> **Mitigación.** Ya mitigado en E0: el alcance se reformuló con el stakeholder a **día–estación con 24 h de antelación**, que además coincide con su ventana real de decisión. Se envía solicitud formal de la base horaria a `datosabiertos@cdmx.gob.mx`<sup class="f">[[1](fuentes.qmd#f1)]</sup>; el histórico COVID-19 se usa únicamente como referencia estructural del perfil intradía, nunca como insumo de entrenamiento.
+> **Mitigación.** Ya mitigado en E0: el alcance se reformuló con el stakeholder a **día-estación con 24 h de antelación**, que además coincide con su ventana real de decisión. Se envía solicitud formal de la base horaria a `datosabiertos@cdmx.gob.mx`<sup class="f">[[1](fuentes.qmd#f1)]</sup>; el histórico COVID-19 se usa únicamente como referencia estructural del perfil intradía, nunca como insumo de entrenamiento.
 
 ### R2 · Actualizaciones retroactivas de la fuente {#r2}
 
@@ -29,7 +29,7 @@ El portal advierte explícitamente que "algunos conjuntos de datos pueden inclui
 
 La línea estuvo parcial o totalmente fuera de servicio desde el 11 de julio de 2022 y se reabrió por completo hasta Observatorio el 16 de noviembre de 2025.<sup class="f">[[10](fuentes.qmd#f10)][[11](fuentes.qmd#f11)]</sup> Sus estaciones tienen ceros estructurales y la demanda migró a otras líneas. Un modelo entrenado a ciegas aprendería una obra pública como si fuera un patrón de comportamiento.
 
-> **Mitigación.** Construir una variable `estado_servicio` por estación–día a partir del calendario documentado de cierres y reaperturas. Excluir del entrenamiento los tramos suspendidos; segmentar la evaluación antes/después de noviembre de 2025; validación temporal con *test* exclusivamente posterior a la reapertura. Convertir el episodio en cuasiexperimento para [PI-5](preguntas.qmd).
+> **Mitigación.** Construir una variable `estado_servicio` por estación-día a partir del calendario documentado de cierres y reaperturas. Excluir del entrenamiento los tramos suspendidos; segmentar la evaluación antes/después de noviembre de 2025; validación temporal con *test* exclusivamente posterior a la reapertura. Convertir el episodio en cuasiexperimento para [PI-5](preguntas.qmd).
 
 ### R4 · El indicador disponible no es el fenómeno de interés {#r4}
 
@@ -59,7 +59,7 @@ Los campos `linea` y `estacion` son de tipo texto<sup class="f">[[3](fuentes.qmd
 
 **Impacto: Medio · Probabilidad: Baja**
 
-La incorporación de datos de tráfico de Waze fue considerada y descartada: Waze no ofrece API pública; comparte un *feed* GeoRSS únicamente con socios gubernamentales del programa Waze for Cities, bajo términos que impiden republicar los datos.<sup class="f">[[13](fuentes.qmd#f13)]</sup> Diseñar el proyecto asumiendo esa fuente lo dejaría sin insumo a media ejecución — y hacer *scraping* violaría los términos de la plataforma.
+La incorporación de datos de tráfico de Waze fue considerada y descartada: Waze no ofrece API pública; comparte un *feed* GeoRSS únicamente con socios gubernamentales del programa Waze for Cities, bajo términos que impiden republicar los datos.<sup class="f">[[13](fuentes.qmd#f13)]</sup> Diseñar el proyecto asumiendo esa fuente lo dejaría sin insumo a media ejecución - y hacer *scraping* violaría los términos de la plataforma.
 
 > **Mitigación.** Excluir formalmente cualquier dato de Waze del alcance de todas las entregas. Las variables de contexto vial, si se necesitan, se tomarán exclusivamente de fuentes abiertas del propio portal de la CDMX.<sup class="f">[[12](fuentes.qmd#f12)]</sup> La restricción queda registrada en el Canvas como requisito, no como preferencia.
 
@@ -79,5 +79,5 @@ Distintas notas atribuyen al STC entre ~1,115 y ~1,171 millones de pasajeros en 
 | **S2** | La afluencia registrada en torniquete es un *proxy* estable de la demanda relativa entre estaciones, aun sin medir ocupación. | Se contrasta el ordenamiento de estaciones con la publicación oficial del STC.<sup class="f">[[5](fuentes.qmd#f5)][[6](fuentes.qmd#f6)]</sup> Si el *proxy* no se sostiene, el alcance se restringe a pronóstico de afluencia sin interpretación de saturación. |
 | **S3** | Los patrones de calendario (día de la semana, quincena, periodos vacacionales, días festivos) siguen vigentes tras la reapertura completa de la Línea 1 en noviembre de 2025.<sup class="f">[[11](fuentes.qmd#f11)]</sup> | Prueba de estabilidad comparando los perfiles semanales antes y después de la reapertura. Si difieren, se restringe el entrenamiento al periodo posterior. |
 | **S4** | El catálogo de estaciones y líneas es consistente a lo largo del histórico. | Auditoría de llaves en E1 (ver [R6](#r6)). Si no lo es, se construye una tabla de equivalencias documentada. |
-| **S5** | El operador puede efectivamente accionar un aviso emitido con 24 horas de antelación (disponibilidad de parque vehicular y de personal). | Supuesto tomado del propio stakeholder. Si la ventana real fuera más larga, el horizonte de pronóstico se extiende a 3–7 días, algo que el modelo ya contempla. |
+| **S5** | El operador puede efectivamente accionar un aviso emitido con 24 horas de antelación (disponibilidad de parque vehicular y de personal). | Supuesto tomado del propio stakeholder. Si la ventana real fuera más larga, el horizonte de pronóstico se extiende a 3-7 días, algo que el modelo ya contempla. |
 | **S6** | Los eventos que explican anomalías (cierres, festivos, eventos masivos) son documentables públicamente con fecha. | Construcción del calendario de eventos en E1. Los días sin explicación se reportan como anomalías no atribuidas, sin forzar una causa. |

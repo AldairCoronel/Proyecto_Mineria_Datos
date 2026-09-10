@@ -4,8 +4,6 @@
 *_cache/
 .Rproj.user/
 
-# OJO: docs/ NO se ignora — es lo que publica GitHub Pages.
-
 # Datos crudos: pesados y con actualizaciones retroactivas.
 # Se versiona el manifiesto con hash y fecha, no el CSV.
 datos/crudos/*.csv

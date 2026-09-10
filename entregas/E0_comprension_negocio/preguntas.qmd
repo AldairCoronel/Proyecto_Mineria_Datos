@@ -1,6 +1,6 @@
 ---
 title: "3. Preguntas de investigación priorizadas"
-subtitle: "Entrega E0 — Comprensión del Negocio"
+subtitle: "Entrega E0 - Comprensión del Negocio"
 ---
 
 **El conjunto priorizado son cuatro preguntas (PI-1 a PI-4)**, conforme a lo solicitado; PI-5 se incluye únicamente como pregunta de reserva y no forma parte de la priorización.
@@ -45,6 +45,6 @@ Las preguntas se ordenan por prioridad según dos criterios: (i) cuánto bloquea
 
 ## [Reserva]{.pill .p-baja} PI-5. ¿La afluencia del Metrobús absorbe demanda de forma medible cuando una línea del Metro reduce o suspende su servicio?
 
-Pregunta de segundo orden que se abordará **solo si PI-1 a PI-4 se resuelven con holgura**. El cierre prolongado de la Línea 1 entre 2022 y 2025 ofrece un **cuasiexperimento natural** para medir el desplazamiento de demanda entre modos<sup class="f">[[10](fuentes.qmd#f10)][[11](fuentes.qmd#f11)]</sup>, lo que daría fundamento empírico —y no solo geográfico— a la recomendación de rutas alternas.
+Pregunta de segundo orden que se abordará **solo si PI-1 a PI-4 se resuelven con holgura**. El cierre prolongado de la Línea 1 entre 2022 y 2025 ofrece un **cuasiexperimento natural** para medir el desplazamiento de demanda entre modos<sup class="f">[[10](fuentes.qmd#f10)][[11](fuentes.qmd#f11)]</sup>, lo que daría fundamento empírico -y no solo geográfico- a la recomendación de rutas alternas.
 
 *Tarea asociada:* análisis de correlación y de cambio de nivel entre series de ambos sistemas.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Anticipación de saturación y recomendación de rutas alternas – Proyecto Integrador — Minería de Datos</title>
+<title>Anticipación de saturación y recomendación de rutas alternas – Proyecto Integrador - Almacenes y Minería de Datos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Proyecto Integrador — Minería de Datos</span>
+    <span class="navbar-title">Proyecto Integrador - Almacenes y Minería de Datos</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -102,10 +102,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e0-—-comprensión-del-negocio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">E0 — Comprensión del Negocio</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e0---comprensión-del-negocio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">E0 - Comprensión del Negocio</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-e0-—-comprensión-del-negocio">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-e0---comprensión-del-negocio">    
         <li>
     <a class="dropdown-item" href="./entregas/E0_comprension_negocio/bitacora.html">
  <span class="dropdown-text">1. Bitácora del stakeholder</span></a>
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">E0 — Comprensión del Negocio</span></a>
+ <span class="menu-text">E0 - Comprensión del Negocio</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -237,9 +237,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#el-proyecto" id="toc-el-proyecto" class="nav-link active" data-scroll-target="#el-proyecto">El proyecto</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
   <li><a href="#estado-de-las-entregas" id="toc-estado-de-las-entregas" class="nav-link" data-scroll-target="#estado-de-las-entregas">Estado de las entregas</a></li>
-  <li><a href="#entrega-e0-comprensión-del-negocio" id="toc-entrega-e0-comprensión-del-negocio" class="nav-link" data-scroll-target="#entrega-e0-comprensión-del-negocio">Entrega E0 — Comprensión del Negocio</a></li>
+  <li><a href="#entrega-e0---comprensión-del-negocio" id="toc-entrega-e0---comprensión-del-negocio" class="nav-link" data-scroll-target="#entrega-e0---comprensión-del-negocio">Entrega E0 - Comprensión del Negocio</a></li>
   <li><a href="#equipo" id="toc-equipo" class="nav-link" data-scroll-target="#equipo">Equipo</a></li>
   <li><a href="#datos-y-licencia" id="toc-datos-y-licencia" class="nav-link" data-scroll-target="#datos-y-licencia">Datos y licencia</a></li>
   </ul>
@@ -268,12 +268,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="el-proyecto" class="level2">
-<h2 class="anchored" data-anchor-id="el-proyecto">El proyecto</h2>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Una autoridad de movilidad de la Ciudad de México necesita <strong>anticipar la saturación</strong> de las líneas del Sistema de Transporte Colectivo (STC) Metro y <strong>recomendar rutas alternas</strong> antes de que la aglomeración ocurra, no durante.</p>
-<p>Este sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de <strong>CRISP-DM</strong>. Cada entrega parcial agrega páginas navegables; no se crea un repositorio nuevo por entrega.</p>
+<p>Este sitio documenta el desarrollo del proyecto de forma incremental, siguiendo las seis fases de <strong>CRISP-DM</strong>.</p>
 <div class="caja caja-clave">
-<p><span class="etiqueta">El hallazgo que definió el alcance</span> La base pública de afluencia del Metro tiene granularidad <strong>diaria</strong>, no horaria: sus campos son <code>fecha, anio, mes, linea, estacion, afluencia</code>. El objetivo original —anticipar la hora pico en tiempo real— resultó <strong>estructuralmente inalcanzable</strong> con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan la víspera. El proyecto se reformuló en consecuencia.</p>
+<p><span class="etiqueta">El hallazgo que definió el alcance</span> La base pública de afluencia del Metro tiene granularidad <strong>diaria</strong>, no horaria: sus campos son <code>fecha, anio, mes, linea, estacion, afluencia</code>. El objetivo original (anticipar la hora pico en tiempo real) resultó <strong>estructuralmente inalcanzable</strong> con los datos disponibles. La entrevista con el stakeholder mostró además que el tiempo real le sirve menos que una alerta con 24 horas de antelación, porque los trenes de refuerzo y el personal se programan en la víspera. El proyecto se reformuló en consecuencia.</p>
 </div>
 </section>
 <section id="estado-de-las-entregas" class="level2">
@@ -327,8 +327,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="entrega-e0-comprensión-del-negocio" class="level2">
-<h2 class="anchored" data-anchor-id="entrega-e0-comprensión-del-negocio">Entrega E0 — Comprensión del Negocio</h2>
+<section id="entrega-e0---comprensión-del-negocio" class="level2">
+<h2 class="anchored" data-anchor-id="entrega-e0---comprensión-del-negocio">Entrega E0 - Comprensión del Negocio</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -343,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="./entregas/E0_comprension_negocio/canvas.html">2. Business Understanding Canvas</a></td>
-<td>Síntesis de una lámina, legible de forma autónoma</td>
+<td>Síntesis de una página, legible de forma autónoma</td>
 </tr>
 <tr class="odd">
 <td><a href="./entregas/E0_comprension_negocio/preguntas.html">3. Preguntas de investigación</a></td>
@@ -379,19 +379,19 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="todo">Integrante 1</span></td>
+<td>Aldair Coronel Ruiz</td>
 <td>Analista / traductor técnico</td>
 </tr>
 <tr class="even">
-<td><span class="todo">Integrante 2</span></td>
+<td>Fernando Bernal Martínez</td>
 <td>Relator y verificación de fuentes</td>
 </tr>
 <tr class="odd">
-<td><span class="todo">Integrante 3</span></td>
+<td>Luis Alberto Hernández Aguilar</td>
 <td>Exploración de datos</td>
 </tr>
 <tr class="even">
-<td><span class="todo">Integrante 4</span></td>
+<td>Tania Ramírez Plascencia</td>
 <td>Factibilidad y calendario de eventos</td>
 </tr>
 </tbody>
@@ -479,7 +479,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/[usuario]\.github\.io\/Proyecto_Mineria_Datos");
+        var filterRegex = new RegExp("https:\/\/fernando-bm\.github\.io\/Proyecto_Mineria_Datos");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -824,7 +824,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Equipo [Nombre] · Facultad de Ciencias, UNAM · Almacenes y Minería de Datos</p>
+<p>Facultad de Ciencias, UNAM · Almacenes y Minería de Datos</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

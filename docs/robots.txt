@@ -1,1 +1,1 @@
-Sitemap: https://[usuario].github.io/Proyecto_Mineria_Datos/sitemap.xml
+Sitemap: https://fernando-bm.github.io/Proyecto_Mineria_Datos/sitemap.xml

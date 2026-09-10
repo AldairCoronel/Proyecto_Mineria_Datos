@@ -34,12 +34,12 @@ En el navegador: **Imprimir → Guardar como PDF**. Conserva la URL y la fecha e
 | 2 | Afluencia diaria de Metrobús CDMX (SEMOVI) | [DD/09/2026] | |
 | 3 | Diccionario de datos, afluencia simple | [DD/09/2026] | |
 | 4 | Afluencia preliminar en transporte público | [DD/09/2026] | |
-| 5 | STC Metro — afluencia de estación por línea | [DD/09/2026] | |
-| 6 | Infobae — estaciones más concurridas 2024 | [DD/09/2026] | |
-| 7 | Milenio — Línea 2 en 2024 | [DD/09/2026] | |
-| 8 | El Universal — caos en hora pico | [DD/09/2026] | |
-| 9 | El Gráfico — Línea 1 colapsada | [DD/09/2026] | |
-| 10 | El Financiero — reapertura de la L1 | [DD/09/2026] | |
-| 11 | Infobae — reapertura total de la L1 | [DD/09/2026] | |
+| 5 | STC Metro - afluencia de estación por línea | [DD/09/2026] | |
+| 6 | Infobae - estaciones más concurridas 2024 | [DD/09/2026] | |
+| 7 | Milenio - Línea 2 en 2024 | [DD/09/2026] | |
+| 8 | El Universal - caos en hora pico | [DD/09/2026] | |
+| 9 | El Gráfico - Línea 1 colapsada | [DD/09/2026] | |
+| 10 | El Financiero - reapertura de la L1 | [DD/09/2026] | |
+| 11 | Infobae - reapertura total de la L1 | [DD/09/2026] | |
 | 12 | Datos de Movilidad (histórico COVID-19) | [DD/09/2026] | |
-| 13 | Waze for Cities — términos del programa | [DD/09/2026] | |
+| 13 | Waze for Cities - términos del programa | [DD/09/2026] | |

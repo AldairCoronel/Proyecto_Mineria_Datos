@@ -3,10 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "Proyecto Integrador — Minería de Datos"
+  title: "Proyecto Integrador - Almacenes y Minería de Datos"
   description: "Anticipación de saturación y recomendación de rutas alternas en la red del STC Metro y Metrobús de la CDMX"
-  site-url: "https://[usuario].github.io/Proyecto_Mineria_Datos"
-  repo-url: "https://github.com/[usuario]/Proyecto_Mineria_Datos"
+  site-url: "https://fernando-bm.github.io/Proyecto_Mineria_Datos"
+  repo-url: "https://github.com/Fernando-BM/Proyecto_Mineria_Datos"
   page-navigation: true
   back-to-top-navigation: true
 
@@ -16,7 +16,7 @@ website:
     left:
       - text: "Inicio"
         href: index.qmd
-      - text: "E0 — Comprensión del Negocio"
+      - text: "E0 - Comprensión del Negocio"
         menu:
           - text: "1. Bitácora del stakeholder"
             href: entregas/E0_comprension_negocio/bitacora.qmd
@@ -40,7 +40,7 @@ website:
     contents:
       - text: "Inicio"
         href: index.qmd
-      - section: "E0 — Comprensión del Negocio"
+      - section: "E0 - Comprensión del Negocio"
         contents:
           - entregas/E0_comprension_negocio/bitacora.qmd
           - entregas/E0_comprension_negocio/canvas.qmd
@@ -52,7 +52,7 @@ website:
 
   page-footer:
     background: light
-    left: "Equipo [Nombre] · Facultad de Ciencias, UNAM · Almacenes y Minería de Datos"
+    left: "Facultad de Ciencias, UNAM · Almacenes y Minería de Datos"
     right: "Datos: SEMOVI, Portal de Datos Abiertos de la CDMX (CC-BY-4.0-ESP)"
 
 format:
