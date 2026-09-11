@@ -11,7 +11,7 @@ El equipo utilizó un modelo de lenguaje como apoyo en esta entrega. **Ninguna s
 
 | Campo | Detalle |
 |-------|---------|
-| **Herramienta** | Claude (Anthropic) - modelo: [especificar]{.todo} |
+| **Herramienta** | Claude (Anthropic) - modelo: Opus 5 |
 | **Fecha** | 31 de agosto de 2026 |
 | **Tarea** | Estructurar los cinco entregables de E0 a partir del PDF de instrucciones y de las dos plantillas del curso. |
 | **Prompt (resumen fiel)** | "Lee el PDF de instrucciones de la entrega E0, la plantilla de bitácora y la plantilla del Business Understanding Canvas. Redacta los entregables para el tema 8 (predicción de retrasos y saturación en el transporte público), con stakeholder simulado sustentado en fuentes verificables." |
