@@ -1,75 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/index.html</loc>
-    <lastmod>2026-09-10T03:26:19.224Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/riesgos_supuestos.html</loc>
-    <lastmod>2026-09-09T21:30:02.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/fuentes.html</loc>
-    <lastmod>2026-09-09T21:30:02.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/canvas.html</loc>
-    <lastmod>2026-09-09T21:30:02.231Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/about.html</loc>
-    <lastmod>2026-09-04T02:32:58.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/bitacora.html</loc>
-    <lastmod>2026-09-09T21:30:02.222Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/criterio_exito.html</loc>
-    <lastmod>2026-09-09T21:30:02.217Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/preguntas.html</loc>
-    <lastmod>2026-09-09T21:30:02.236Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/uso_ia.html</loc>
-    <lastmod>2026-09-09T21:30:02.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://[usuario].github.io/Proyecto_Mineria_Datos/index.html</loc>
-    <lastmod>2026-09-10T03:26:19.224Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/index.html</loc>
-    <lastmod>2026-09-10T05:57:52.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/bitacora.html</loc>
-    <lastmod>2026-09-10T05:51:01.308Z</lastmod>
-  </url>
-  <url>
     <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/canvas.html</loc>
-    <lastmod>2026-09-10T05:57:33.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/fuentes.html</loc>
-    <lastmod>2026-09-10T05:44:10.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/uso_ia.html</loc>
-    <lastmod>2026-09-10T06:11:00.586Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/preguntas.html</loc>
-    <lastmod>2026-09-10T05:40:19.322Z</lastmod>
+    <lastmod>2026-09-11T02:29:15.626Z</lastmod>
   </url>
   <url>
     <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/criterio_exito.html</loc>
-    <lastmod>2026-09-10T06:02:03.269Z</lastmod>
+    <lastmod>2026-09-11T02:29:15.627Z</lastmod>
   </url>
   <url>
     <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/riesgos_supuestos.html</loc>
-    <lastmod>2026-09-10T06:02:48.535Z</lastmod>
+    <lastmod>2026-09-11T02:29:15.629Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/preguntas.html</loc>
+    <lastmod>2026-09-11T02:29:15.629Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/index.html</loc>
+    <lastmod>2026-09-11T02:29:15.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/bitacora.html</loc>
+    <lastmod>2026-09-11T02:29:15.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/fuentes.html</loc>
+    <lastmod>2026-09-11T02:29:15.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fernando-bm.github.io/Proyecto_Mineria_Datos/entregas/E0_comprension_negocio/uso_ia.html</loc>
+    <lastmod>2026-09-11T02:29:15.629Z</lastmod>
   </url>
 </urlset>
