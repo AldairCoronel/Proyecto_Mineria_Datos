@@ -71,7 +71,19 @@ Distintas notas atribuyen al STC entre ~1,115 y ~1,171 millones de pasajeros en 
 
 > **Mitigación.** Tratar la base de datos abiertos como **única fuente de verdad** para todo cálculo; las cifras de prensa se usan solo para contextualizar el problema de negocio, nunca para validar o ajustar los datos. La discrepancia se documenta como observación de calidad de la información pública.
 
-## 5.2 Supuestos que el equipo asume explícitamente
+
+## 5.2 Matriz de Gestión de Riesgos
+
+| Categoría | Riesgo Identificado | Impacto | Probabilidad | Plan de Mitigación |
+|:---|:---|:---:|:---:|:---|
+| **Calidad de datos** | **Inconsistencia o vacíos en las series de afluencia:** Faltantes de información derivados de fallas técnicas o mantenimiento en validadores y torniquetes. | **Alto** | **Media** | Aplicación de métodos de imputación de datos por estacionalidad (promedios ponderados por tipo de día e interpolación con estaciones adyacentes). |
+| **Operativo** | **Subregistro y sesgo en bitácoras de incidentes:** Captura manual incompleta o imprecisa de retardos por parte del Puesto Central de Control (PCC). | **Medio** | **Alta** | Validación de anomalías mediante contraste de tiempos inter-trenes (*headway*) calculados algorítmicamente contra las bitácoras manuales. |
+| **Técnico** | **Indisponibilidad o latencia de datos en tiempo real:** Retraso en la ingesta de registros para el cálculo de alertas inmediatas. | **Alto** | **Media** | Implementación de una arquitectura orientada al pronóstico diario a 24 horas (*batch*), reduciendo la dependencia crítica de la latencia en tiempo real. |
+| **Organizacional** | **Resistencia a la adopción del modelo por personal operativo:** Poca confianza de los reguladores de tráfico en las predicciones generadas. | **Alto** | **Baja** | Definición conjunta de los umbrales de alerta ($\text{Recall} \ge 0.70$) y entrega de explicaciones interpretables para la toma de decisiones. |
+| **Exógeno** | **Eventos exógenos y alteraciones en la red:** Obras de mantenimiento mayor o contingencias climáticas que alteren drásticamente el flujo habitual. | **Medio** | **Alta** | Inclusión de variables categóricas (*flags*) para aislar periodos de obra y tratarlos como eventos excepcionales en la fase de preparación de datos. |
+
+
+## 5.3 Supuestos que el equipo asume explícitamente
 
 | # | Supuesto | Cómo se verificará (o qué pasa si es falso) |
 |---|----------|---------------------------------------------|
@@ -81,3 +93,5 @@ Distintas notas atribuyen al STC entre ~1,115 y ~1,171 millones de pasajeros en 
 | **S4** | El catálogo de estaciones y líneas es consistente a lo largo del histórico. | Auditoría de llaves en E1 (ver [R6](#r6)). Si no lo es, se construye una tabla de equivalencias documentada. |
 | **S5** | El operador puede efectivamente accionar un aviso emitido con 24 horas de antelación (disponibilidad de parque vehicular y de personal). | Supuesto tomado del propio stakeholder. Si la ventana real fuera más larga, el horizonte de pronóstico se extiende a 3-7 días, algo que el modelo ya contempla. |
 | **S6** | Los eventos que explican anomalías (cierres, festivos, eventos masivos) son documentables públicamente con fecha. | Construcción del calendario de eventos en E1. Los días sin explicación se reportan como anomalías no atribuidas, sin forzar una causa. |
+
+

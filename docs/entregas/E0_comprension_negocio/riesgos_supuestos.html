@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -249,7 +278,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#r7" id="toc-r7" class="nav-link" data-scroll-target="#r7">R7 · Dependencia de fuentes externas inaccesibles</a></li>
   <li><a href="#r8" id="toc-r8" class="nav-link" data-scroll-target="#r8">R8 · Discrepancia entre cifras reportadas públicamente</a></li>
   </ul></li>
-  <li><a href="#supuestos-que-el-equipo-asume-explícitamente" id="toc-supuestos-que-el-equipo-asume-explícitamente" class="nav-link" data-scroll-target="#supuestos-que-el-equipo-asume-explícitamente">5.2 Supuestos que el equipo asume explícitamente</a></li>
+  <li><a href="#matriz-de-gestión-de-riesgos" id="toc-matriz-de-gestión-de-riesgos" class="nav-link" data-scroll-target="#matriz-de-gestión-de-riesgos">5.2 Matriz de Gestión de Riesgos</a></li>
+  <li><a href="#supuestos-que-el-equipo-asume-explícitamente" id="toc-supuestos-que-el-equipo-asume-explícitamente" class="nav-link" data-scroll-target="#supuestos-que-el-equipo-asume-explícitamente">5.3 Supuestos que el equipo asume explícitamente</a></li>
   </ul>
 </nav>
     </div>
@@ -344,8 +374,66 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 </section>
 </section>
+<section id="matriz-de-gestión-de-riesgos" class="level2">
+<h2 class="anchored" data-anchor-id="matriz-de-gestión-de-riesgos">5.2 Matriz de Gestión de Riesgos</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Categoría</th>
+<th style="text-align: left;">Riesgo Identificado</th>
+<th style="text-align: center;">Impacto</th>
+<th style="text-align: center;">Probabilidad</th>
+<th style="text-align: left;">Plan de Mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Calidad de datos</strong></td>
+<td style="text-align: left;"><strong>Inconsistencia o vacíos en las series de afluencia:</strong> Faltantes de información derivados de fallas técnicas o mantenimiento en validadores y torniquetes.</td>
+<td style="text-align: center;"><strong>Alto</strong></td>
+<td style="text-align: center;"><strong>Media</strong></td>
+<td style="text-align: left;">Aplicación de métodos de imputación de datos por estacionalidad (promedios ponderados por tipo de día e interpolación con estaciones adyacentes).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Operativo</strong></td>
+<td style="text-align: left;"><strong>Subregistro y sesgo en bitácoras de incidentes:</strong> Captura manual incompleta o imprecisa de retardos por parte del Puesto Central de Control (PCC).</td>
+<td style="text-align: center;"><strong>Medio</strong></td>
+<td style="text-align: center;"><strong>Alta</strong></td>
+<td style="text-align: left;">Validación de anomalías mediante contraste de tiempos inter-trenes (<em>headway</em>) calculados algorítmicamente contra las bitácoras manuales.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Técnico</strong></td>
+<td style="text-align: left;"><strong>Indisponibilidad o latencia de datos en tiempo real:</strong> Retraso en la ingesta de registros para el cálculo de alertas inmediatas.</td>
+<td style="text-align: center;"><strong>Alto</strong></td>
+<td style="text-align: center;"><strong>Media</strong></td>
+<td style="text-align: left;">Implementación de una arquitectura orientada al pronóstico diario a 24 horas (<em>batch</em>), reduciendo la dependencia crítica de la latencia en tiempo real.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Organizacional</strong></td>
+<td style="text-align: left;"><strong>Resistencia a la adopción del modelo por personal operativo:</strong> Poca confianza de los reguladores de tráfico en las predicciones generadas.</td>
+<td style="text-align: center;"><strong>Alto</strong></td>
+<td style="text-align: center;"><strong>Baja</strong></td>
+<td style="text-align: left;">Definición conjunta de los umbrales de alerta (<span class="math inline">\(\text{Recall} \ge 0.70\)</span>) y entrega de explicaciones interpretables para la toma de decisiones.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Exógeno</strong></td>
+<td style="text-align: left;"><strong>Eventos exógenos y alteraciones en la red:</strong> Obras de mantenimiento mayor o contingencias climáticas que alteren drásticamente el flujo habitual.</td>
+<td style="text-align: center;"><strong>Medio</strong></td>
+<td style="text-align: center;"><strong>Alta</strong></td>
+<td style="text-align: left;">Inclusión de variables categóricas (<em>flags</em>) para aislar periodos de obra y tratarlos como eventos excepcionales en la fase de preparación de datos.</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="supuestos-que-el-equipo-asume-explícitamente" class="level2">
-<h2 class="anchored" data-anchor-id="supuestos-que-el-equipo-asume-explícitamente">5.2 Supuestos que el equipo asume explícitamente</h2>
+<h2 class="anchored" data-anchor-id="supuestos-que-el-equipo-asume-explícitamente">5.3 Supuestos que el equipo asume explícitamente</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
